@@ -72,6 +72,13 @@ How the library is put together and why.
    — lihat `isDeleteMarker()`. `liveTable()` menggabungkan semuanya:
    subscribe → `getAllRows` (state awal) → replay buffer anti-race → update
    otomatis via `LiveTable.applyUpdate`. Hanya jalur terenkripsi (EC-SRP5).
+   Terverifikasi live 2026-10-15: SUBSCRIBE ACK **22/22 handler** (semua menu:
+   log, neighbor, ppp secret/profile/active, ip address, dhcp-client, service,
+   route, firewall filter/nat/mangle, queue simple, interface, bridge
+   port/vlan, netwatch, hotspot server/profile/user/ip-binding/active).
+   Push change terverifikasi via trigger untuk log + ppp-secret. Catatan:
+   perubahan counter (mis. byte interface) TIDAK memicu push — hanya
+   perubahan struktural/data.
 
 ## Threading
 
