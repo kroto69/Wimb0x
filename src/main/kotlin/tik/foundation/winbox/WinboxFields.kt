@@ -26,9 +26,13 @@ object PppSecretFields {
     const val ROW_ID = 0xFE0001 // wajib untuk SET/REMOVE
 }
 
-/** [27,102] — [live] 7 rows ter-dump. */
+/** [27,102] — [live] 9 rows ter-dump di v7. */
 object PppProfileFields {
-    const val NAME = 0xFE0009
+    const val NAME = 0x1 // str — "default" teramati [live v7]
+    const val LOCAL_ADDRESS = 0x2 // u8 enm
+    const val REMOTE_ADDRESS = 0x3 // u8 enm
+    const val COMMENT = 0xFE0009
+    const val DISABLED = 0xFE000A
     const val ROW_ID = 0xFE0001
 }
 
@@ -47,6 +51,13 @@ object PppActiveFields {
 object FwFilterFields {
     const val CHAIN = 0x27 // string
     const val ACTION = 0x28 // enm
+    const val SRC_ADDRESS = 0x1A2 // Src. Address [opt]
+    const val DST_ADDRESS = 0x1A3 // Dst. Address [opt]
+    const val PROTOCOL = 0x194 // Protocol [opt]
+    const val SRC_PORT = 0x1B7 // Src. Port [opt]
+    const val DST_PORT = 0x1B8 // Dst. Port [opt]
+    const val IN_INTERFACE = 0x190 // In. Interface [opt]
+    const val OUT_INTERFACE = 0x191 // Out. Interface [opt]
     const val BYTES = 0x2710 // bigbytes — perlu stats bit di getall
     const val PACKETS = 0x2711 // bigdecimal — perlu stats bit di getall
     const val COMMENT = 0xFE0009
@@ -77,6 +88,7 @@ object FwMangleFields {
 /** [20,9] Simple Queue — [jg] 55 fields terdefinisi. */
 object QueueFields {
     const val NAME = 0x2 // string
+    const val TARGET = 0x72 // Target [multi] — "192.168.88.0/24"
     const val UP_MAX = 0x3C // Upload Max Limit [enm] — 20000000 = 20 Mbps teramati [live v6]
     // NOTE v7: rate aktual terbaca di u64 0xD8 (up) / 0x13C (down), mis. 600000000 = 600 Mbps [live v7]
     const val DOWN_MAX = 0x47 // Download Max Limit [enm]
@@ -84,6 +96,21 @@ object QueueFields {
     const val DOWN_LIMIT_AT = 0x46 // Download Limit At
     const val UP_PRIORITY = 0x36 // Upload Priority
     const val DOWN_PRIORITY = 0x4C // Download Priority
+    const val COMMENT = 0xFE0009
+    const val DISABLED = 0xFE000A
+    const val ROW_ID = 0xFE0001
+}
+
+// ================= INTERFACE — [live v7] =================
+
+/**
+ * [20,0] Interface list — [live] 163 rows ter-dump di v7.
+ * Interface fisik tidak bisa add/remove — hanya SET (rename/comment/disable).
+ */
+object InterfaceFields {
+    const val NAME = 0x10006 // str — "ether1" teramati [live v7]
+    const val DEFAULT_NAME = 0x10005 // str — "eth0" teramati [live v7]
+    const val TYPE = 0x1001E // str — "ether" teramati [live v7]
     const val COMMENT = 0xFE0009
     const val DISABLED = 0xFE000A
     const val ROW_ID = 0xFE0001
@@ -104,6 +131,8 @@ object IpAddrFields {
 /** [44,1] Route — [jg]. */
 object IpRouteFields {
     const val DST = 0x1 // Dst. Address [network]
+    const val GATEWAY = 0x2E // Gateway [multi] — kompleks, pakai string IP bila didukung
+    const val DISTANCE = 0x3F0 // Distance [opt number]
     const val COMMENT = 0xFE0009
     const val DISABLED = 0xFE000A
     const val ROW_ID = 0xFE0001
@@ -141,6 +170,11 @@ object HsServerFields {
 
 /** [63,10] IP Binding — [jg]. */
 object HsBindingFields {
+    const val MAC = 0x1 // macaddr
+    const val ADDRESS = 0x7 // network
+    const val TO_ADDRESS = 0x3 // ipaddr
+    const val SERVER = 0x5 // enm → resolve via [63,11]
+    const val TYPE = 0x6 // enm (bypassed/regular/blocked)
     const val COMMENT = 0xFE0009
     const val DISABLED = 0xFE000A
     const val ROW_ID = 0xFE0001
@@ -150,10 +184,13 @@ object HsBindingFields {
 
 /** [51] Netwatch Host — [jg]. */
 object NetwatchFields {
+    const val HOST = 0x1 // ipaddr — host yang dipantau
+    const val NAME = 0xFE0009 // nama pakai COMMENT (tidak ada field nama khusus di .jg)
     const val INTERVAL = 0x2 // interval
     const val TIMEOUT = 0x3 // number
-    const val STATUS = 0x4 // enm
-    const val SINCE = 0x5 // date
+    const val STATUS = 0x4 // enm (read-only)
+    const val UP_SCRIPT = 0x6 // script
+    const val DOWN_SCRIPT = 0x7 // script
     const val COMMENT = 0xFE0009
     const val DISABLED = 0xFE000A
     const val ROW_ID = 0xFE0001
