@@ -87,9 +87,12 @@ fun main() {
 
     // ---- Queue ----
     val q = QueueInput(name = "warnet-01", target = "192.168.90.21/32",
+        dstAddress = "192.168.90.21/32", parent = 0,
         upMaxBps = 20_000_000L, downMaxBps = 20_000_000L, priority = 8).toFields()
     check("queue name", q.str(QueueFields.NAME) == "warnet-01")
     check("queue target", q.str(QueueFields.TARGET) == "192.168.90.21/32")
+    check("queue dst", q.str(QueueFields.DST) == "192.168.90.21/32")
+    check("queue parent", q.u8(QueueFields.PARENT) == 0)
     check("queue up-max", q.u32(QueueFields.UP_MAX) == 20_000_000L)
     check("queue prio", q.u8(QueueFields.UP_PRIORITY) == 8)
 

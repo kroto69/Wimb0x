@@ -89,6 +89,8 @@ object FwMangleFields {
 object QueueFields {
     const val NAME = 0x2 // string
     const val TARGET = 0x72 // Target [multi] — "192.168.88.0/24"
+    const val DST = 0x73 // Dst. [opt] — "192.168.90.21/32"
+    const val PARENT = 0x1 // Parent [enm] — index queue parent / global
     const val UP_MAX = 0x3C // Upload Max Limit [enm] — 20000000 = 20 Mbps teramati [live v6]
     // NOTE v7: rate aktual terbaca di u64 0xD8 (up) / 0x13C (down), mis. 600000000 = 600 Mbps [live v7]
     const val DOWN_MAX = 0x47 // Download Max Limit [enm]

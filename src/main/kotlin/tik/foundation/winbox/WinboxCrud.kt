@@ -290,6 +290,8 @@ fun WinboxSession.removeFwMangle(id: M2Field): Boolean =
 data class QueueInput(
     val name: String? = null,
     val target: String? = null, // "192.168.88.0/24"
+    val dstAddress: String? = null, // "192.168.90.21/32"
+    val parent: Int? = null, // enm — index parent queue
     val upMaxBps: Long? = null,
     val downMaxBps: Long? = null,
     val upLimitAtBps: Long? = null,
@@ -302,6 +304,8 @@ data class QueueInput(
 internal fun QueueInput.toFields() = arrayOf(
     strF(QueueFields.NAME, name),
     strF(QueueFields.TARGET, target),
+    strF(QueueFields.DST, dstAddress),
+    u8F(QueueFields.PARENT, parent),
     u32F(QueueFields.UP_MAX, upMaxBps),
     u32F(QueueFields.DOWN_MAX, downMaxBps),
     u32F(QueueFields.UP_LIMIT_AT, upLimitAtBps),
