@@ -68,7 +68,59 @@ Semua path di bawah ✅ **live 2026-10-15** ke RB750Gr3, kecuali yang bertanda �
 | `[76]` | terminal (mepty) | ✅ |
 | `[26]` | traceroute | 🟡 path terpetakan; **native streaming belum terpecahkan** — fallback via terminal |
 
-## 3. Integrasi aplikasi Android (`wimb0x-app`)
+## 3. Status CRUD per tabel (`WinboxCrud.kt`)
+
+Hasil live test 2026-10-15 ~19:40 WIB (data dummy `wxt-`, TEST-NET 192.0.2.0/24, auto-cleanup):
+v7 (ROS 7): **33/40 PASS** · v6 (ROS 6): **44/52 PASS** (termasuk tabel baru).
+
+Legenda: ✅ full CRUD live (add→verify→set→verify→remove) · 🟡 sebagian · 🔴 buntu · ⬜ belum dikerjakan
+
+### ✅ Valid — full CRUD terverifikasi live
+
+| Tabel | Path | v6 | v7 | Catatan |
+|---|---|---|---|---|
+| PPP Secret | `[27,101]` | ✅ | ✅ | 10/10 + password terbaca |
+| PPP Profile | `[27,102]` | ✅ | ✅ | |
+| Interface (set-only) | `[20,0]` | ✅ | ✅ | rename/comment/disable; fisik tak bisa add/remove |
+| IP Address | `[20,1]` | ✅ | 🟡 | v6 full; v7 gagal (lihat 🔴) |
+| IP Service (set-only) | `[68,1]` | ✅ | ✅ | port/enable; list tetap |
+| Firewall Filter | `[20,3]` | ✅ | ✅ | |
+| Firewall Mangle | `[20,7]` | ✅ | ✅ | |
+| Hotspot User | `[63,1]` | 🟡 | ✅ | v6 verify gagal (timing?) |
+| Netwatch | `[51]` | ✅ | 🟡 | v6 full; v7 butuh interval U8 (sudah fix) |
+| DHCP Client | `[43,1]` | ✅ | ✅ | |
+| Bridge Port | `[16,2]` | ✅ | ✅ | |
+| DNS Static | `[14,3]` | ✅ | ⬜ | baru ditambah, 3/3 di v6 |
+
+### 🔴 Buntu — butuh investigasi encoding
+
+| Tabel | Path | Masalah | Yang sudah diketahui |
+|---|---|---|---|
+| Queue target | `[20,9]` 0x72 | Tipe `multi` → `MsgArray`; replikasi belum pas, router nolak halus | Struktur: `MsgArray[M2Message(0x1=U32 IP, 0x2=U32 netmask)]` |
+| IP Route gateway | `[44,1]` 0x2e | Tipe `multi` kompleks (5 sub-field) | Struktur: `MsgArray(0x6=U32Array[gw], 0x8, 0x5, 0x1, 0x7)` |
+| Hotspot Server | `[63,11]` | Interface enum sudah pakai row ID, tetap ditolak | Mungkin butuh field wajib lain |
+| Hotspot Binding | `[63,10]` | Address sudah U32, tetap ditolak | Curiga format MAC / field type |
+| Firewall NAT (v6) | `[20,5]` | v7 jalan, v6 nolak; chain+action sudah benar | v6 lebih ketat, butuh field wajib lain |
+| DHCP Server/Network | `[23,0]`/`[23,2]` | Baru ditambah, add OK tapi verify gagal | Kemungkinan interface ID / encoding |
+
+### 🟡 Pelajaran encoding (dari diagnostik live + tik4net)
+
+- Field tipe `network` di `.jg` → kirim sebagai **U32 IP + U32 netmask** (field terpisah), bukan string `"192.168.88.1/24"`.
+- Referensi interface (tipe `enm`) → pakai **row ID** (`0xFE0001`, mis. 1,2,3) bukan posisi (0,1,2). Helper: `getInterfaceOptions()`.
+- Tipe `multi` → `MsgArray` berisi `M2Message` — isi tiap tipe beda, harus intip dari router.
+- Netwatch interval (0x2) = **U8**, bukan U32.
+- Referensi: tik4net (read-focused, WinBox M2) + RE MikroTik Pro Android (spec + `.jg`); tak ada yang kasih kamus lengkap write-encoding.
+
+### ⬜ Belum dikerjakan
+
+- DHCP Server/Network: perbaiki verify (lanjutkan dari 🔴)
+- Interface detail (traffic, SFP diagnostics) — path beda di `.jg`
+- DHCP lease static, VLAN, bridge detail
+- Semantik lengkap flag matcher firewall
+- EC-SRP5 live ke router modern (saat ini fallback MD5)
+
+## 4. Integrasi aplikasi Android (`wimb0x-app`)
+
 
 | Area | Status |
 |---|---|
@@ -83,14 +135,14 @@ Semua path di bawah ✅ **live 2026-10-15** ke RB750Gr3, kecuali yang bertanda �
 | Reconnect/backoff + resubscribe + lifecycle background/foreground | 🔴 |
 | Race fix: ACK `pending` terpasang sebelum kirim; listener subscribe terdaftar sebelum tunggu ACK | 🔴 |
 
-## 4. Wajib tes di perangkat fisik sebelum klaim stabil
+## 5. Wajib tes di perangkat fisik sebelum klaim stabil
 
 - [ ] MNDP solicit→receive→parse di LAN/HP asli
 - [ ] EC-SRP5 login ke router modern (RouterOS 7)
 - [ ] Aplikasi penuh di HP fisik (belum pernah)
 - [ ] Traceroute native `[26]` atau fallback terminal yang teruji
 
-## Riwayat verifikasi (2026-10-15)
+## Riwayat verifikasi
 
 - 18/18 handler live OK · PPP secret CRUD 10/10 · subscribe push 7/7 · `liveTable()` e2e 4/4
 - Unit: 57/57 (core) · 6/6 (LiveTable) · 13/13 (MAC) · 6/6 (MNDP socket)
