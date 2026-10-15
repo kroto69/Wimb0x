@@ -590,3 +590,100 @@ fun WinboxSession.setBridgePort(id: M2Field, input: BridgePortInput): Boolean = 
 /** [jg] */
 fun WinboxSession.removeBridgePort(id: M2Field): Boolean =
     doRemove(WinboxPaths.BRIDGE_PORT, id)
+
+// ================= DNS Static [14,3] — [jg] =================
+
+data class DnsStaticInput(
+    val name: String? = null,
+    val regexp: String? = null,
+    val type: Int? = null, // enm
+    val ttlSec: Long? = null,
+    val comment: String? = null,
+    val disabled: Boolean? = null,
+)
+
+private fun DnsStaticInput.toFields() = arrayOf(
+    strF(DnsStaticFields.NAME, name),
+    strF(DnsStaticFields.REGEXP, regexp),
+    u8F(DnsStaticFields.TYPE, type),
+    u32F(DnsStaticFields.TTL, ttlSec),
+    strF(DnsStaticFields.COMMENT, comment),
+    boolF(DnsStaticFields.DISABLED, disabled),
+)
+
+/** [jg] */
+fun WinboxSession.addDnsStatic(input: DnsStaticInput): Boolean =
+    doAdd(WinboxPaths.DNS_STATIC, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.setDnsStatic(id: M2Field, input: DnsStaticInput): Boolean =
+    doSet(WinboxPaths.DNS_STATIC, id, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.removeDnsStatic(id: M2Field): Boolean =
+    doRemove(WinboxPaths.DNS_STATIC, id)
+
+// ================= DHCP Server [23,0] — [jg] =================
+
+data class DhcpServerInput(
+    val name: String? = null,
+    val interfaceId: Int? = null, // enm → row ID interface
+    val leaseTimeSec: Long? = null,
+    val comment: String? = null,
+    val disabled: Boolean? = null,
+)
+
+private fun DhcpServerInput.toFields() = arrayOf(
+    strF(DhcpServerFields.NAME, name),
+    u8F(DhcpServerFields.INTERFACE, interfaceId),
+    u32F(DhcpServerFields.LEASE_TIME, leaseTimeSec),
+    strF(DhcpServerFields.COMMENT, comment),
+    boolF(DhcpServerFields.DISABLED, disabled),
+)
+
+/** [jg] */
+fun WinboxSession.addDhcpServer(input: DhcpServerInput): Boolean =
+    doAdd(WinboxPaths.DHCP_SERVER, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.setDhcpServer(id: M2Field, input: DhcpServerInput): Boolean =
+    doSet(WinboxPaths.DHCP_SERVER, id, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.removeDhcpServer(id: M2Field): Boolean =
+    doRemove(WinboxPaths.DHCP_SERVER, id)
+
+// ================= DHCP Network [23,2] — [jg] =================
+
+data class DhcpNetworkInput(
+    val address: String? = null, // "192.168.88.0/24"
+    val gateway: String? = null,
+    val dnsServers: List<String>? = null,
+    val comment: String? = null,
+    val disabled: Boolean? = null,
+)
+
+private fun DhcpNetworkInput.toFields(): Array<M2Field?> {
+    val (ip, prefix) = address?.let { parseNetwork(it) } ?: (null to 24)
+    return arrayOf(
+        ip?.let { M2Field(DhcpNetworkFields.ADDRESS, M2Value.U32(ipToU32(it))) },
+        ip?.let { M2Field(DhcpNetworkFields.NETMASK, M2Value.U32(prefixToNetmaskU32(prefix))) },
+        gateway?.let { M2Field(DhcpNetworkFields.GATEWAY, M2Value.U32(ipToU32(it))) },
+        dnsServers?.let { M2Field(DhcpNetworkFields.DNS_SERVERS,
+            M2Value.U32Array(it.map { s -> ipToU32(s) })) },
+        strF(DhcpNetworkFields.COMMENT, comment),
+        boolF(DhcpNetworkFields.DISABLED, disabled),
+    )
+}
+
+/** [jg] */
+fun WinboxSession.addDhcpNetwork(input: DhcpNetworkInput): Boolean =
+    doAdd(WinboxPaths.DHCP_NETWORK, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.setDhcpNetwork(id: M2Field, input: DhcpNetworkInput): Boolean =
+    doSet(WinboxPaths.DHCP_NETWORK, id, *input.toFields())
+
+/** [jg] */
+fun WinboxSession.removeDhcpNetwork(id: M2Field): Boolean =
+    doRemove(WinboxPaths.DHCP_NETWORK, id)

@@ -199,6 +199,50 @@ object NetwatchFields {
     const val ROW_ID = 0xFE0001
 }
 
+// ================= DNS — [jg] =================
+
+/** [14,3] DNS Static Entry — [jg]. */
+object DnsStaticFields {
+    const val NAME = 0x1 // string
+    const val REGEXP = 0x16 // string
+    const val TYPE = 0x17 // enm (A/AAAA/CNAME...)
+    const val TTL = 0x4 // interval
+    const val COMMENT = 0xFE0009
+    const val DISABLED = 0xFE000A
+    const val ROW_ID = 0xFE0001
+}
+
+/** [14,2] DNS Settings — singleton, SET saja — [jg]. */
+object DnsSettingsFields {
+    const val SERVERS = 0xA // multi — daftar DNS server
+    const val ALLOW_REMOTE = 0x3 // bool
+    const val ROW_ID = 0xFE0001
+}
+
+// ================= DHCP SERVER — [jg] =================
+
+/** [23,0] DHCP Server — [jg]. */
+object DhcpServerFields {
+    const val NAME = 0x9 // string
+    const val INTERFACE = 0x7 // enm → id interface
+    const val LEASE_TIME = 0x5 // interval
+    const val ADDRESS_POOL = 0x8 // enm
+    const val COMMENT = 0xFE0009
+    const val DISABLED = 0xFE000A
+    const val ROW_ID = 0xFE0001
+}
+
+/** [23,2] DHCP Network — [jg]. */
+object DhcpNetworkFields {
+    const val ADDRESS = 0x1 // network → U32 + netmask
+    const val NETMASK = 0x9 // netmask → U32
+    const val GATEWAY = 0x3 // multiipaddr
+    const val DNS_SERVERS = 0x4 // multiipaddr
+    const val COMMENT = 0xFE0009
+    const val DISABLED = 0xFE000A
+    const val ROW_ID = 0xFE0001
+}
+
 /** [24,2] System Resource — [live] via polling 3 detik. */
 object SystemResourceFields {
     const val UPTIME = 0x1

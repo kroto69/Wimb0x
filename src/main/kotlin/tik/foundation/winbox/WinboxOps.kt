@@ -18,6 +18,10 @@ object WinboxPaths {
     val PPP_ACTIVE = listOf(27, 103)
     val IP_ADDRESS = listOf(20, 1)
     val IP_DHCP_CLIENT = listOf(43, 1)
+    val DHCP_SERVER = listOf(23, 0)
+    val DHCP_NETWORK = listOf(23, 2)
+    val DNS_SETTINGS = listOf(14, 2)
+    val DNS_STATIC = listOf(14, 3)
     val IP_SERVICE = listOf(68, 1)
     val IP_ROUTE = listOf(44, 1)
     val FIREWALL_FILTER = listOf(20, 3)
@@ -33,6 +37,8 @@ object WinboxPaths {
     val HOTSPOT_USER = listOf(63, 1)
     val HOTSPOT_IP_BINDING = listOf(63, 10)
     val HOTSPOT_ACTIVE = listOf(63, 13)
+    val SYSTEM_RESOURCE = listOf(24, 2)
+    val SYSTEM_HEALTH = listOf(24, 29)
 }
 
 /** True bila sesi berjalan di jalur legacy (bukan EC-SRP5). */
