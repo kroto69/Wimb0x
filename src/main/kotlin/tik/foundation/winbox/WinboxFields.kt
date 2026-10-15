@@ -38,7 +38,7 @@ object PppProfileFields {
 
 /** [27,103] — [live] 27 rows ter-dump. */
 object PppActiveFields {
-    const val NAME = 0xFE0009
+    const val NAME = 0x1  // live v7: 0x1 = str name ("HOME"); 0xFE0009 kosong
     const val CALLER_ID = 0x3 // str format MAC
     const val BYTES_UP = 0x9 // u64
     const val BYTES_DOWN = 0xA // u64
