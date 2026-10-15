@@ -52,6 +52,24 @@ How the library is put together and why.
    lives in `WinboxSession` or `MndpDiscovery`, which are `Closeable`.
 4. **Zero dependencies.** Only the JDK. This keeps the library usable from
    plain JVM, Android, and server apps without version conflicts.
+5. **Hardcoded paths, no `.jg` fetching.** The official WinBox client downloads
+   `.jg` plugin files from the router (via mproxy `[2,2]`) on every connect;
+   those files define each menu's handler path and fields, so the official
+   client adapts to any RouterOS version automatically. This library takes
+   the opposite approach: handler paths and field ids were extracted from
+   `.jg` once during development and are now hardcoded (`WinboxPaths`,
+   `docs/HANDLERS.md`). Simpler at runtime, at the cost of possibly going
+   stale if MikroTik changes paths in a future RouterOS release (in practice
+   these are very stable). `.jg` fetching can be added later if dynamic
+   adaptation is ever needed.
+6. **Reads are one-shot; subscribe is future work.** `getAllRows` sends
+   `CMD_GET_ALL` (`0xFE0004`) and returns one response — call it on a timer
+   and you have polling, the same pattern as the 8728 API. The protocol
+   itself also offers `CMD_SUBSCRIBE` (`0xFE0012`): the router then *pushes*
+   updates whenever the data changes — no timer, less traffic, truly live.
+   That is the real architectural difference versus API polling, and it is
+   what the official client uses for live views. It is not implemented in
+   this library yet.
 
 ## Threading
 
