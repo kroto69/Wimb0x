@@ -109,8 +109,9 @@ TCP 8291 → handshake (EC-SRP5 or legacy MD5) → M2 TLV messages
    and `EcSrp5.kt` (Curve25519 in Weierstrass form).
 3. **M2 messages.** Binary TLV: `M2` magic + key (3 bytes LE) + typed value.
    Handler paths are `u32[]`, e.g. `[27,101]` = `/ppp secret`.
-   See [`docs/PROTOCOL.md`](docs/PROTOCOL.md) for the byte-level spec and
-   [`docs/HANDLERS.md`](docs/HANDLERS.md) for the handler table.
+   See [`docs/PROTOCOL.md`](docs/PROTOCOL.md) for the byte-level spec,
+   [`docs/HANDLERS.md`](docs/HANDLERS.md) for the handler table, and
+   [`docs/FIELD-MAP-2026-10-15.md`](docs/FIELD-MAP-2026-10-15.md) for live field mappings.
 4. **Discovery.** MNDP = UDP broadcast to `255.255.255.255:5678`, parse the
    TLV replies. See `discovery/`.
 
@@ -149,6 +150,7 @@ docs/
 ├── PROTOCOL.md          # byte-level protocol spec
 ├── HANDLERS.md          # handler path reference
 └── ARCHITECTURE.md      # design notes
+ROADMAP.md               # status implementasi: mana yang sudah live, mana yang rencana
 ```
 
 ## Status & caveats
