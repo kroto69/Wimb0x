@@ -134,6 +134,25 @@ fun WinboxSession.setInterface(
     boolF(InterfaceFields.DISABLED, disabled),
 )
 
+// ================= Interface options (untuk dropdown) =================
+
+/** Satu opsi dropdown interface: index enum + nama tampilan. */
+data class InterfaceOption(val index: Int, val name: String)
+
+/**
+ * Daftar interface untuk dropdown (mis. form tambah IP Address / DHCP Client).
+ *
+ * Index = posisi baris di tabel interface. Ini asumsi pemetaan enum RouterOS
+ * dari pengamatan dump live (field interface = u8 kecil, mis. 3, 11).
+ * PERLU verifikasi live sebelum dipakai untuk operasi tulis.
+ */
+fun WinboxSession.getInterfaceOptions(): List<InterfaceOption> =
+    runCatching {
+        getAllRows(WinboxPaths.INTERFACE).mapIndexedNotNull { idx, row ->
+            row.str(InterfaceFields.NAME)?.let { InterfaceOption(idx, it) }
+        }
+    }.getOrDefault(emptyList())
+
 // ================= IP Address [20,1] — [jg] =================
 
 data class IpAddressInput(
