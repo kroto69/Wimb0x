@@ -7,6 +7,9 @@ official WinBox client speaks. Not the 8728 API, not REST, not SSH.
 Built and verified against real RouterOS hardware. Every handler below was
 tested live.
 
+> **Scope:** this is a *simple* version covering the features used most
+> often. For the full power of WinBox, use the official MikroTik app.
+
 ## Features
 
 - **Login** — EC-SRP5 (RouterOS ≥ 6.43) with automatic fallback to legacy
