@@ -39,6 +39,26 @@ private fun WinboxSession.doSet(path: List<Int>, id: M2Field, vararg fields: M2F
 private fun WinboxSession.doRemove(path: List<Int>, id: M2Field): Boolean =
     runCatching { removeRow(path, id) != null }.getOrDefault(false)
 
+/** "192.0.2.99/24" → Pair("192.0.2.99", 24). Prefix default 32 bila tak ada. */
+fun parseNetwork(s: String): Pair<String, Int> {
+    val parts = s.trim().split("/")
+    val ip = parts[0]
+    val prefix = if (parts.size > 1) parts[1].toIntOrNull() ?: 32 else 32
+    require(prefix in 0..32) { "prefix invalid: $s" }
+    return ip to prefix
+}
+
+/** Prefix length → netmask U32 ala octet-LSB (cth. /24 → 16777215). */
+fun prefixToNetmaskU32(prefix: Int): Long {
+    require(prefix in 0..32)
+    val mask = if (prefix == 0) 0L else (0xFFFFFFFFL shl (32 - prefix)) and 0xFFFFFFFFL
+    val b0 = (mask shr 24) and 0xFF
+    val b1 = (mask shr 16) and 0xFF
+    val b2 = (mask shr 8) and 0xFF
+    val b3 = mask and 0xFF
+    return b0 or (b1 shl 8) or (b2 shl 16) or (b3 shl 24)
+}
+
 /** "20M"/"512K"/"1500" → bps. */
 fun parseRateToBps(s: String): Long {
     val t = s.trim().uppercase()
@@ -162,12 +182,16 @@ data class IpAddressInput(
     val disabled: Boolean? = null,
 )
 
-internal fun IpAddressInput.toFields() = arrayOf(
-    strF(IpAddrFields.ADDRESS, address),
-    u8F(IpAddrFields.INTERFACE, interfaceIdx),
-    strF(IpAddrFields.COMMENT, comment),
-    boolF(IpAddrFields.DISABLED, disabled),
-)
+internal fun IpAddressInput.toFields(): Array<M2Field?> {
+    val (ip, prefix) = address?.let { parseNetwork(it) } ?: (null to 32)
+    return arrayOf(
+        ip?.let { M2Field(IpAddrFields.ADDRESS, M2Value.U32(ipToU32(it))) },
+        ip?.let { M2Field(IpAddrFields.NETMASK, M2Value.U32(prefixToNetmaskU32(prefix))) },
+        u8F(IpAddrFields.INTERFACE, interfaceIdx),
+        strF(IpAddrFields.COMMENT, comment),
+        boolF(IpAddrFields.DISABLED, disabled),
+    )
+}
 
 /** [jg] */
 fun WinboxSession.addIpAddress(input: IpAddressInput): Boolean =
@@ -419,7 +443,7 @@ data class HsBindingInput(
 
 internal fun HsBindingInput.toFields() = arrayOf(
     strF(HsBindingFields.MAC, mac),
-    strF(HsBindingFields.ADDRESS, address),
+    address?.let { M2Field(HsBindingFields.ADDRESS, M2Value.U32(ipToU32(parseNetwork(it).first))) },
     ipF(HsBindingFields.TO_ADDRESS, toAddress),
     u8F(HsBindingFields.SERVER, serverIdx),
     u8F(HsBindingFields.TYPE, type),

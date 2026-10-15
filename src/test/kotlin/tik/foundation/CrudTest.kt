@@ -23,6 +23,8 @@ import tik.foundation.winbox.QueueInput
 import tik.foundation.winbox.WinboxPaths
 import tik.foundation.winbox.ipToU32
 import tik.foundation.winbox.parseRateToBps
+import tik.foundation.winbox.parseNetwork
+import tik.foundation.winbox.prefixToNetmaskU32
 import tik.foundation.winbox.toFields
 import tik.foundation.winbox.toFilterFields
 
@@ -69,8 +71,12 @@ fun main() {
 
     // ---- IP Address ----
     val ia = IpAddressInput(address = "192.168.88.1/24", interfaceIdx = 2, disabled = true).toFields()
-    check("ipaddr address str", ia.str(IpAddrFields.ADDRESS) == "192.168.88.1/24")
+    check("ipaddr address u32", ia.u32(IpAddrFields.ADDRESS) == ipToU32("192.168.88.1"))
+    check("ipaddr netmask u32", ia.u32(IpAddrFields.NETMASK) == 16777215L)
     check("ipaddr iface u8", ia.u8(IpAddrFields.INTERFACE) == 2)
+    check("parseNetwork", parseNetwork("10.0.0.1/8") == ("10.0.0.1" to 8))
+    check("netmask /32", prefixToNetmaskU32(32) == 4294967295L)
+    check("netmask /0", prefixToNetmaskU32(0) == 0L)
 
     // ---- IP Route ----
     val ir = IpRouteInput(dst = "0.0.0.0/0", gateway = "192.168.88.1", distance = 1L).toFields()
@@ -104,6 +110,7 @@ fun main() {
     check("hsserver name", hs.str(0x10) == "hs1")
     val hb = HsBindingInput(mac = "AA:BB:CC:DD:EE:FF", address = "192.168.10.5", type = 1).toFields()
     check("hsbinding mac", hb.str(0x1) == "AA:BB:CC:DD:EE:FF")
+    check("hsbinding addr u32", hb.u32(0x7) == ipToU32("192.168.10.5"))
 
     // ---- Netwatch ----
     val nw = NetwatchInput(host = "8.8.8.8", name = "google-dns",

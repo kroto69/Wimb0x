@@ -122,8 +122,9 @@ object InterfaceFields {
 
 /** [20,1] Address — [jg]. */
 object IpAddrFields {
-    const val ADDRESS = 0x1 // network (u32)
-    const val NETWORK = 0x2 // ipaddr (u32)
+    const val ADDRESS = 0x1 // network → U32 IP
+    const val NETMASK = 0x3 // netmask → U32 (16777215 = /24, teramati [live v7])
+    const val NETWORK = 0x2 // ipaddr (u32) — derived oleh router
     const val INTERFACE = 0xA // enm → resolve ke nama interface
     const val COMMENT = 0xFE0009
     const val DISABLED = 0xFE000A
