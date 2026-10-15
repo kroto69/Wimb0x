@@ -229,6 +229,17 @@ class WinboxSession(
             .write(WinboxFrame.encodeData(payload, WinboxFrame.TAG_ENCRYPTED))
     }
 
+    /**
+     * Kirim satu pesan M2 tanpa menunggu respons. Mengembalikan SYS_REQID
+     * yang dipakai. Untuk dispatcher/subscribe — hanya jalur terenkripsi.
+     */
+    internal fun sendOneWay(msg: M2Message): Int {
+        if (legacyMode) throw WinboxException("sendOneWay hanya untuk jalur terenkripsi")
+        val id = nextReqId()
+        sendEncrypted(msg.withField(sysReqId(id)).encode())
+        return id
+    }
+
     private fun recvEncryptedM2(): M2Message {
         val inp = requireNotNull(input) { "belum connect()" }
         val k = requireNotNull(keys) { "belum login (jalur baru)" }

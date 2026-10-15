@@ -33,6 +33,8 @@ import tik.foundation.winbox.userU32
 import tik.foundation.winbox.ipToU32
 import tik.foundation.winbox.itemId
 import tik.foundation.winbox.WinboxPaths
+import tik.foundation.winbox.LiveTable
+import tik.foundation.winbox.isDeleteMarker
 import java.io.ByteArrayInputStream
 
 private var failures = 0
@@ -250,6 +252,23 @@ fun main() {
     val idRow32 = M2Message(listOf(M2Field(0xFE0001, M2Value.U32(1234)), userStr(1, "x")))
     check("itemId u32", idRow32.itemId()?.let { (it.value as M2Value.U32).v } == 1234L)
     check("paths", WinboxPaths.PPP_SECRET == listOf(27, 101) && WinboxPaths.LOG == listOf(3, 4))
+
+    // ============ LiveTable: apply add/update/delete ============
+    fun row(id: Int, name: String?) = M2Message(
+        listOf(M2Field(0xFE0001, M2Value.U8(id))) +
+            (if (name != null) listOf(userStr(1, name)) else emptyList()),
+    )
+    fun delRow(id: Int) = M2Message(
+        listOf(M2Field(0xFE0013, M2Value.U8(1)), M2Field(0xFE0001, M2Value.U8(id))),
+    )
+    val lt = LiveTable { m: M2Message -> m.str(m2Key(1, M2Ns.USER)) }
+    lt.setInitial(listOf(row(1, "a"), row(2, "b")))
+    check("livetable initial", lt.snapshot() == listOf("a", "b"))
+    check("livetable add", lt.applyUpdate(listOf(row(3, "c"))) && lt.snapshot() == listOf("a", "b", "c"))
+    check("livetable update", lt.applyUpdate(listOf(row(2, "b2"))) && lt.snapshot()[1] == "b2")
+    check("livetable delete", lt.applyUpdate(listOf(delRow(1))) && lt.snapshot() == listOf("b2", "c"))
+    check("livetable delete-marker", delRow(9).isDeleteMarker() && !row(9, "x").isDeleteMarker())
+    check("livetable noop", !lt.applyUpdate(listOf(delRow(99))) && !lt.applyUpdate(emptyList()))
 
     println(if (failures == 0) "ALL SMOKE TESTS PASSED" else "$failures FAILURES")
     if (failures > 0) kotlin.system.exitProcess(1)

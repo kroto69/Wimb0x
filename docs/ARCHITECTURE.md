@@ -62,14 +62,16 @@ How the library is put together and why.
    stale if MikroTik changes paths in a future RouterOS release (in practice
    these are very stable). `.jg` fetching can be added later if dynamic
    adaptation is ever needed.
-6. **Reads are one-shot; subscribe is future work.** `getAllRows` sends
-   `CMD_GET_ALL` (`0xFE0004`) and returns one response — call it on a timer
-   and you have polling, the same pattern as the 8728 API. The protocol
-   itself also offers `CMD_SUBSCRIBE` (`0xFE0012`): the router then *pushes*
-   updates whenever the data changes — no timer, less traffic, truly live.
-   That is the real architectural difference versus API polling, and it is
-   what the official client uses for live views. It is not implemented in
-   this library yet.
+6. **Reads are push-based via subscribe.** `WinboxSubscriber` (sesi TCP
+   terpisah, satu koneksi untuk banyak subscription) mengirim `CMD_SUBSCRIBE`
+   (`0xFE0012`); router menjawab ACK lalu *push* baris yang berubah sebagai
+   pesan unsolicited (perintah `0xFE000B`, tanpa `SYS_REQID`, korelasi via
+   `SYS_FROM` = path handler). Background thread mendispatch ke listener per
+   path; request sinkron (ACK) dikorelasikan via `SYS_REQID` lewat
+   `sendOneWay`. Baris hapus ditandai field `0xFE0013` + `0xFE0001` (item id)
+   — lihat `isDeleteMarker()`. `liveTable()` menggabungkan semuanya:
+   subscribe → `getAllRows` (state awal) → replay buffer anti-race → update
+   otomatis via `LiveTable.applyUpdate`. Hanya jalur terenkripsi (EC-SRP5).
 
 ## Threading
 

@@ -72,6 +72,29 @@ fun main() {
 
 More examples in [`examples/`](examples/).
 
+## Live updates via subscribe (no polling)
+
+```kotlin
+val main = WinboxSession(host, port).apply { connect(); login(user, pass) }
+WinboxSubscriber(host, port).use { sub ->
+    sub.connect()
+    sub.login(user, pass)
+    // Tabel cermin yang update sendiri tiap ada perubahan di router:
+    val table = sub.liveTable(
+        session = main,
+        path = WinboxPaths.PPP_SECRET,
+        parse = { row -> row.str(m2Key(1, M2Ns.USER)) }, // M2Message -> T
+        onChange = { snap -> println("${snap.size} secrets") },
+    )
+    Thread.sleep(30_000)
+    println("final snapshot: ${table.snapshot().size}")
+}
+```
+
+How it works: `SUBSCRIBE` (`0xFE0012`) → router ACKs, then *pushes* changed
+rows (`0xFE000B`, no request id) whenever data changes. Deletes arrive as
+marker rows (`0xFE0013` + item id). See `docs/ARCHITECTURE.md`.
+
 ## How it works
 
 ```

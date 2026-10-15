@@ -56,4 +56,18 @@ fun main() {
         s.removeRow(WinboxPaths.PPP_SECRET, id)
         println("CRUD ok")
     }
+
+    // 6) Subscribe: data live via push, tanpa polling
+    WinboxSubscriber(host, port).use { sub ->
+        sub.connect()
+        sub.login(user, pass)
+        val table = sub.liveTable(
+            session = WinboxSession(host, port).apply { connect(); login(user, pass) },
+            path = WinboxPaths.PPP_SECRET,
+            parse = { row -> row.str(m2Key(1, M2Ns.USER)) },
+            onChange = { snap -> println("ppp secrets: ${snap.filterNotNull().size}") },
+        )
+        Thread.sleep(15000) // ubah sesuatu di router lain → tabel update sendiri
+        println("final: ${table.snapshot().filterNotNull().size} secrets")
+    }
 }
