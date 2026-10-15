@@ -168,8 +168,15 @@ data class InterfaceOption(val index: Int, val name: String)
  */
 fun WinboxSession.getInterfaceOptions(): List<InterfaceOption> =
     runCatching {
-        getAllRows(WinboxPaths.INTERFACE).mapIndexedNotNull { idx, row ->
-            row.str(InterfaceFields.NAME)?.let { InterfaceOption(idx, it) }
+        getAllRows(WinboxPaths.INTERFACE).mapNotNull { row ->
+            val name = row.str(InterfaceFields.NAME) ?: return@mapNotNull null
+            val idVal = row.itemId()?.value ?: return@mapNotNull null
+            val idx = when (idVal) {
+                is M2Value.U8 -> idVal.v
+                is M2Value.U32 -> idVal.v.toInt()
+                else -> return@mapNotNull null
+            }
+            InterfaceOption(idx, name)
         }
     }.getOrDefault(emptyList())
 
@@ -215,13 +222,24 @@ data class IpRouteInput(
     val disabled: Boolean? = null,
 )
 
-internal fun IpRouteInput.toFields() = arrayOf(
-    strF(IpRouteFields.DST, dst),
-    ipF(IpRouteFields.GATEWAY, gateway),
-    u32F(IpRouteFields.DISTANCE, distance),
-    strF(IpRouteFields.COMMENT, comment),
-    boolF(IpRouteFields.DISABLED, disabled),
-)
+internal fun IpRouteInput.toFields(): Array<M2Field?> {
+    val gwMsg = gateway?.let {
+        M2Field(IpRouteFields.GATEWAY, M2Value.MsgArray(listOf(
+            M2Message(listOf(
+                M2Field(0x6, M2Value.U32Array(listOf(ipToU32(it)))),
+                M2Field(0x8, M2Value.U32Array(listOf(1L))),
+                M2Field(0x5, M2Value.U8(2)),
+            ))
+        )))
+    }
+    return arrayOf(
+        strF(IpRouteFields.DST, dst),
+        gwMsg,
+        u32F(IpRouteFields.DISTANCE, distance),
+        strF(IpRouteFields.COMMENT, comment),
+        boolF(IpRouteFields.DISABLED, disabled),
+    )
+}
 
 /** [jg] */
 fun WinboxSession.addIpRoute(input: IpRouteInput): Boolean =
@@ -344,20 +362,31 @@ data class QueueInput(
     val disabled: Boolean? = null,
 )
 
-internal fun QueueInput.toFields() = arrayOf(
-    strF(QueueFields.NAME, name),
-    strF(QueueFields.TARGET, target),
-    strF(QueueFields.DST, dstAddress),
-    u8F(QueueFields.PARENT, parent),
+internal fun QueueInput.toFields(): Array<M2Field?> {
+    val targetMsg = target?.let {
+        val (ip, prefix) = parseNetwork(it)
+        M2Field(QueueFields.TARGET, M2Value.MsgArray(listOf(
+            M2Message(listOf(
+                M2Field(0x1, M2Value.U32(ipToU32(ip))),
+                M2Field(0x2, M2Value.U32(prefixToNetmaskU32(prefix))),
+            ))
+        )))
+    }
+    return arrayOf(
+        strF(QueueFields.NAME, name),
+        targetMsg,
+        strF(QueueFields.DST, dstAddress),
+        u8F(QueueFields.PARENT, parent),
     u32F(QueueFields.UP_MAX, upMaxBps),
     u32F(QueueFields.DOWN_MAX, downMaxBps),
     u32F(QueueFields.UP_LIMIT_AT, upLimitAtBps),
     u32F(QueueFields.DOWN_LIMIT_AT, downLimitAtBps),
     u8F(QueueFields.UP_PRIORITY, priority),
-    u8F(QueueFields.DOWN_PRIORITY, priority),
-    strF(QueueFields.COMMENT, comment),
-    boolF(QueueFields.DISABLED, disabled),
-)
+        u8F(QueueFields.DOWN_PRIORITY, priority),
+        strF(QueueFields.COMMENT, comment),
+        boolF(QueueFields.DISABLED, disabled),
+    )
+}
 
 /** [jg] */
 fun WinboxSession.addQueue(input: QueueInput): Boolean =
@@ -478,7 +507,7 @@ data class NetwatchInput(
 internal fun NetwatchInput.toFields() = arrayOf(
     ipF(NetwatchFields.HOST, host),
     strF(NetwatchFields.COMMENT, name),
-    u32F(NetwatchFields.INTERVAL, intervalSec),
+    u8F(NetwatchFields.INTERVAL, intervalSec?.toInt()),
     u32F(NetwatchFields.TIMEOUT, timeoutMs),
     strF(NetwatchFields.UP_SCRIPT, upScript),
     strF(NetwatchFields.DOWN_SCRIPT, downScript),

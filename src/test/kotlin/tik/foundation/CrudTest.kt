@@ -81,7 +81,8 @@ fun main() {
     // ---- IP Route ----
     val ir = IpRouteInput(dst = "0.0.0.0/0", gateway = "192.168.88.1", distance = 1L).toFields()
     check("route dst", ir.str(IpRouteFields.DST) == "0.0.0.0/0")
-    check("route gw u32", ir.u32(IpRouteFields.GATEWAY) == ipToU32("192.168.88.1"))
+    val irGw = ir.firstOrNull { it?.key == IpRouteFields.GATEWAY }?.value as? M2Value.MsgArray
+    check("route gw msgarr", irGw != null && irGw.vs.size == 1)
     check("route distance", ir.u32(IpRouteFields.DISTANCE) == 1L)
 
     // ---- Firewall ----
@@ -96,7 +97,10 @@ fun main() {
         dstAddress = "192.168.90.21/32", parent = 0,
         upMaxBps = 20_000_000L, downMaxBps = 20_000_000L, priority = 8).toFields()
     check("queue name", q.str(QueueFields.NAME) == "warnet-01")
-    check("queue target", q.str(QueueFields.TARGET) == "192.168.90.21/32")
+    val qTarget = q.firstOrNull { it?.key == QueueFields.TARGET }?.value as? M2Value.MsgArray
+    check("queue target msgarr", qTarget != null && qTarget.vs.size == 1)
+    val qTgtIp = qTarget?.vs?.firstOrNull()?.fields?.firstOrNull { it.key == 0x1 }?.value as? M2Value.U32
+    check("queue target ip", qTgtIp?.v == ipToU32("192.168.90.21"))
     check("queue dst", q.str(QueueFields.DST) == "192.168.90.21/32")
     check("queue parent", q.u8(QueueFields.PARENT) == 0)
     check("queue up-max", q.u32(QueueFields.UP_MAX) == 20_000_000L)
@@ -116,7 +120,7 @@ fun main() {
     val nw = NetwatchInput(host = "8.8.8.8", name = "google-dns",
         intervalSec = 60L, timeoutMs = 1000L).toFields()
     check("netwatch host u32", nw.u32(NetwatchFields.HOST) == ipToU32("8.8.8.8"))
-    check("netwatch interval", nw.u32(NetwatchFields.INTERVAL) == 60L)
+    check("netwatch interval u8", nw.u8(NetwatchFields.INTERVAL) == 60)
 
     // ---- Paths ----
     check("path ppp-secret", WinboxPaths.PPP_SECRET == listOf(27, 101))
