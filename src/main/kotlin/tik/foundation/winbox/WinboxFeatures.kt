@@ -56,15 +56,39 @@ fun formatMac(b: ByteArray): String =
     else b.joinToString("") { "%02x".format(it) }
 
 /** Baca semua baris (GET_ALL) dari handler path, sadar-mode sesi. */
-fun WinboxSession.getAllRows(handlerPath: List<Int>): List<M2Message> {
+fun WinboxSession.getAllRows(handlerPath: List<Int>, withStats: Boolean = false): List<M2Message> {
     val resp = if (sessionMode.startsWith("EC-SRP5")) {
-        crud(handlerPath, CMD_GET_ALL.toLong())
+        crud(handlerPath, CMD_GET_ALL.toLong(), withStats = withStats)
     } else {
-        getAllLegacy(handlerPath)
+        getAllLegacy(handlerPath, withStats = withStats)
             ?: throw WinboxException("legacy getall timeout: $handlerPath")
     }
     return (resp.fields.firstOrNull { it.key == 0xFE0002 }?.value as? M2Value.MsgArray)?.vs
         ?: emptyList()
+}
+
+/**
+ * Baca singleton (GET_SINGLETON 0xFE000D) — untuk objek tunggal seperti
+ * /system identity, /system resource. Return null kalau tidak ada.
+ */
+fun WinboxSession.getSingleton(handlerPath: List<Int>): M2Message? {
+    return try {
+        val resp = if (sessionMode.startsWith("EC-SRP5")) {
+            crud(handlerPath, CMD_GET_SINGLETON.toLong())
+        } else {
+            // legacy: coba getAll, ambil baris pertama
+            getAllLegacy(handlerPath)?.let { legacyResp ->
+                val rows = (legacyResp.fields.firstOrNull { it.key == 0xFE0002 }?.value as? M2Value.MsgArray)?.vs
+                return rows?.firstOrNull()
+            }
+            return null
+        }
+        // response singleton: fields langsung di root, atau dalam MsgArray 1 elemen
+        val asArray = (resp.fields.firstOrNull { it.key == 0xFE0002 }?.value as? M2Value.MsgArray)?.vs?.firstOrNull()
+        asArray ?: resp
+    } catch (_: Exception) {
+        null
+    }
 }
 
 /** Parse satu baris mentah → [HotspotActiveUser]. Pure, bisa dites offline. */
