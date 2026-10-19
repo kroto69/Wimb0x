@@ -1,0 +1,174 @@
+# Roadmap — Wimb0x WinBox Library
+
+Peta status implementasi library WinBox Kotlin (clean-room, zero dependency).
+Sumber detail protokol: `docs/PROTOCOL.md`, daftar handler: `docs/HANDLERS.md`, arsitektur: `docs/ARCHITECTURE.md`.
+
+Legenda: ✅ terverifikasi live ke router fisik · 🟡 sudah diimplementasi, belum live-test · 🔴 rencana/belum dikerjakan
+
+## 1. Protocol core
+
+| Area | Status | Bukti |
+|---|---|---|
+| Framing + codec M2 (termasuk tipe `0x98` & `0x80`) | ✅ | 57/57 unit test; interop live |
+| Kriptografi AES-128-CBC / HKDF / RC4 | ✅ | interop live |
+| EC-SRP5 (login modern) | 🟡 | 9/9 sama dengan referensi Python; **belum live-test ke router modern** (router tes lawas, pakai MD5) |
+| Legacy MD5 fallback | ✅ | login live ke RB750Gr3 |
+| Sesi TCP 8291 + login | ✅ | live |
+| Generic CRUD (`getAllRows`, add/set/remove) | ✅ | PPP secret CRUD 10/10 live |
+| Terminal / mepty `[76]` | ✅ | live |
+| Ping `[77]` (start/poll/cancel) | ✅ | live (ke 127.0.0.1 ~32 Mbps) |
+| Subscribe push + `LiveTable` | ✅ | 7/7 push ADD/SET/REMOVE, 4/4 e2e, 6/6 unit — live |
+| Stats bit `0x2` (`withStats`) di GET_ALL/subscribe/liveTable | ✅ | dipakai untuk counter runtime |
+| MNDP discovery (UDP 5678) | 🟡 | socket/lifecycle 6/6; **full loop solicit→receive→parse belum dites di LAN/HP fisik** (sandbox blokir UDP) |
+| Resolve MAC→IP via cache MNDP (`normalizeMac`, `lookupMac`, `solicitAndResolve`) | 🟡 | 13/13 unit test; belum live-test di LAN |
+
+> Catatan arsitektur (terverifikasi live): SUBSCRIBE hanya push **perubahan struktural** tabel.
+> Perubahan nilai (CPU, traffic, sensor) **tidak pernah di-push** — app official MikroTik sendiri
+> polling tiap 1 detik (`autorefresh:1000`). Jadi: subscribe untuk tabel, polling untuk nilai live.
+
+## 2. Handler coverage
+
+Semua path di bawah ✅ **live 2026-10-15** ke RB750Gr3, kecuali yang bertanda 🟡/🔴.
+
+| Path | Menu | Status |
+|---|---|---|
+| `[3,4]` | `/log` | ✅ |
+| `[13,4]` | system info / capabilities | ✅ |
+| `[24,2]` | `/system resource` | ✅ (polling — subscribe ACK tapi 0 push) |
+| `[24,29]` | `/system health` | ✅ (polling — subscribe ACK tapi 0 push) |
+| `[20,0]` | `/interface` | ✅ |
+| `[16,2]` | `/interface bridge port` | ✅ |
+| `[16,13]` | `/interface bridge vlan` | ✅ |
+| `[27,101]` | `/ppp secret` | ✅ (password terbaca; SET/REMOVE wajib target `0xFE0001`) |
+| `[27,102]` | `/ppp profile` | ✅ (rate-limit 0x16 Str, dns 0x15 U32Array, only-one 0x19 — live v6+v7 2026-10-17) |
+| `[27,103]` | `/ppp active` | ✅ |
+| `[20,1]` | `/ip address` | ✅ |
+| `[43,1]` | `/ip dhcp-client` | ✅ |
+| `[10,1]` | `/ip neighbor` | ✅ |
+| `[44,1]` | `/ip route` | ✅ |
+| `[68,1]` | `/ip service` | ✅ |
+| `[20,8]` | `/ip arp` | ✅ |
+| `[63,11]` | `/ip hotspot server` | ✅ |
+| `[63,14]` | `/ip hotspot server profile` | ✅ |
+| `[63,1]` | `/ip hotspot user` | ✅ |
+| `[63,10]` | `/ip hotspot ip-binding` | ✅ |
+| `[63,13]` | `/ip hotspot active` | ✅ |
+| `[20,3]` | `/ip firewall filter` | ✅ |
+| `[20,5]` | `/ip firewall nat` | ✅ |
+| `[20,7]` | `/ip firewall mangle` | ✅ |
+| `[20,9]` | `/queue simple` | ✅ |
+| `[20,12]` | `/queue tree` | ✅ |
+| `[23,0]` | `/ip dhcp-server` | ✅ |
+| `[23,1]` | `/ip dhcp-server lease` | ✅ |
+| `[14,1]` | `/ip dns cache` | ✅ |
+| `[14,2]` | `/ip dns settings` | ✅ |
+| `[14,3]` | `/ip dns static` | ✅ |
+| `[51]` | `/tool netwatch` | ✅ |
+| `[77]` | ping | ✅ (action; bukan tabel) |
+| `[76]` | terminal (mepty) | ✅ |
+| `[26]` | traceroute | 🟡 path terpetakan; **native streaming belum terpecahkan** — fallback via terminal |
+
+## 3. Status CRUD per tabel (`WinboxCrud.kt`)
+
+Hasil live test 2026-10-15 ~19:40 WIB (data dummy `wxt-`, TEST-NET 192.0.2.0/24, auto-cleanup):
+v7 (ROS 7): **33/40 PASS** · v6 (ROS 6): **44/52 PASS** (termasuk tabel baru).
+
+Legenda: ✅ full CRUD live (add→verify→set→verify→remove) · 🟡 sebagian · 🔴 buntu · ⬜ belum dikerjakan
+
+### ✅ Valid — full CRUD terverifikasi live
+
+| Tabel | Path | v6 | v7 | Catatan |
+|---|---|---|---|---|
+| PPP Secret | `[27,101]` | ✅ | ✅ | 10/10 + password terbaca |
+| PPP Profile | `[27,102]` | ✅ | ✅ | |
+| Interface (set-only) | `[20,0]` | ✅ | ✅ | rename/comment/disable; fisik tak bisa add/remove |
+| IP Address | `[20,1]` | ✅ | 🟡 | v6 full; v7 gagal (lihat 🔴) |
+| IP Service (set-only) | `[68,1]` | ✅ | ✅ | port/enable; list tetap |
+| Firewall Filter | `[20,3]` | ✅ | ✅ | |
+| Firewall Mangle | `[20,7]` | ✅ | ✅ | |
+| Hotspot User | `[63,1]` | 🟡 | ✅ | v6 verify gagal (timing?) |
+| Netwatch | `[51]` | ✅ | 🟡 | v6 full; v7 butuh interval U8 (sudah fix) |
+| DHCP Client | `[43,1]` | ✅ | ✅ | |
+| Bridge Port | `[16,2]` | ✅ | ✅ | |
+| DNS Static | `[14,3]` | ✅ | ⬜ | baru ditambah, 3/3 di v6 |
+
+### 🔴 Buntu — butuh investigasi encoding
+
+| Tabel | Path | Masalah | Yang sudah diketahui |
+|---|---|---|---|
+| Queue target | `[20,9]` 0x72 | Tipe `multi` → `MsgArray`; replikasi belum pas, router nolak halus | Struktur: `MsgArray[M2Message(0x1=U32 IP, 0x2=U32 netmask)]` |
+| IP Route gateway | `[44,1]` 0x2e | Tipe `multi` kompleks (5 sub-field) | Struktur: `MsgArray(0x6=U32Array[gw], 0x8, 0x5, 0x1, 0x7)` |
+| Hotspot Server | `[63,11]` | Interface enum sudah pakai row ID, tetap ditolak | Mungkin butuh field wajib lain |
+| Hotspot Binding | `[63,10]` | Address sudah U32, tetap ditolak | Curiga format MAC / field type |
+| Firewall NAT (v6) | `[20,5]` | v7 jalan, v6 nolak; chain+action sudah benar | v6 lebih ketat, butuh field wajib lain |
+| DHCP Server/Network | `[23,0]`/`[23,2]` | Baru ditambah, add OK tapi verify gagal | Kemungkinan interface ID / encoding |
+
+### 🟡 Pelajaran encoding (dari diagnostik live + tik4net)
+
+- Field tipe `network` di `.jg` → kirim sebagai **U32 IP + U32 netmask** (field terpisah), bukan string `"192.168.88.1/24"`.
+- Referensi interface (tipe `enm`) → pakai **row ID** (`0xFE0001`, mis. 1,2,3) bukan posisi (0,1,2). Helper: `getInterfaceOptions()`.
+- Tipe `multi` → `MsgArray` berisi `M2Message` — isi tiap tipe beda, harus intip dari router.
+- Netwatch interval (0x2) = **U8**, bukan U32.
+- Referensi: tik4net (read-focused, WinBox M2) + RE MikroTik Pro Android (spec + `.jg`); tak ada yang kasih kamus lengkap write-encoding.
+
+### ⬜ Belum dikerjakan
+
+- DHCP Server/Network: perbaiki verify (lanjutkan dari 🔴)
+- Interface detail (traffic, SFP diagnostics) — path beda di `.jg`
+- DHCP lease static, VLAN, bridge detail
+- Semantik lengkap flag matcher firewall
+- EC-SRP5 live ke router modern (saat ini fallback MD5)
+
+## 4. Integrasi aplikasi Android (`wimb0x-app`)
+
+
+| Area | Status |
+|---|---|
+| `SessionManager` (connect/login/disconnect + subscriber) | 🟡 ada, **belum di-wire ke UI login** |
+| Login: tab Discover MNDP → ketuk MAC → resolve IP → connect | 🔴 |
+| "Ingat password" + tab Saved (penyimpanan aman) | 🔴 |
+| Binding data nyata ke 34 layar (sekarang masih mock) | 🔴 |
+| Subscribe tabel struktural (PPP/hotspot/firewall/IP/log) | 🔴 |
+| Polling traffic **hanya baris terlihat** (viewport-only) | 🔴 desain ada |
+| Auto Diagnose (ping, loss/jitter, throughput vs rate-limit, verdict) | 🔴 desain ada |
+| CRUD mengikuti hak akses user RouterOS | 🔴 |
+| Reconnect/backoff + resubscribe + lifecycle background/foreground | 🔴 |
+| Race fix: ACK `pending` terpasang sebelum kirim; listener subscribe terdaftar sebelum tunggu ACK | 🔴 |
+
+## 5. Wajib tes di perangkat fisik sebelum klaim stabil
+
+- [ ] MNDP solicit→receive→parse di LAN/HP asli
+- [ ] EC-SRP5 login ke router modern (RouterOS 7)
+- [ ] Aplikasi penuh di HP fisik (belum pernah)
+- [ ] Traceroute native `[26]` atau fallback terminal yang teruji
+
+## Riwayat verifikasi
+
+- 18/18 handler live OK · PPP secret CRUD 10/10 · subscribe push 7/7 · `liveTable()` e2e 4/4
+- Unit: 57/57 (core) · 6/6 (LiveTable) · 13/13 (MAC) · 6/6 (MNDP socket)
+- Router tes: RB750Gr3 (`Serper`), RouterOS lawas — hasil di router modern bisa berbeda
+
+- 2026-10-15 field dump live 20 tabel → `docs/FIELD-MAP-2026-10-15.md` + konstanta `WinboxFields.kt` (PPP secret ✅, firewall/queue/hotspot/netwatch 🔍).
+
+## 6. TAHAP 1-4 (2026-10-16) — 🟡 belum live-test
+
+| Item | Status |
+|---|---|
+| RouterVersion + FieldKey + WriteResult + verifiedSet | 🟡 |
+| WinboxModels.kt + WinboxReaders.kt (14 model) | 🟡 |
+| docs/MODELS.md | 🟡 |
+| examples/DumpTable.kt + DiffDump.kt | 🟡 |
+| Paging getAllRows (0xFE0003/0xFE0015) | 🟡 |
+| Unit test Tahap12Test | 🟡 |
+
+### Perlu tes live oleh user (JANGAN dicentang dulu)
+
+- [ ] PPP secret: PROFILE u8 vs u32 saat add/set (Crud kirim u32, Fields u8)
+- [ ] IP service: tipe key 0x1/0x2 (string vs u8)
+- [ ] getInterfaceOptions: index == itemId?
+- [ ] paging pada tabel >255 baris (interface v7 163, log 316)
+- [ ] arah bytes PPP active (0x9 vs 0xA)
+- [ ] RouterVersion: [24,2]/0x16 (v7) dan [24,1]/0xd (v6)
+- [ ] WriteResult: error code/message dari router asli
+- [ ] verifiedSet: retry timing di router asli
+- [ ] DumpTable/DiffDump: jalan ke router asli

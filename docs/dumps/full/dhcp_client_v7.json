@@ -1,0 +1,37 @@
+{
+  "path": [43, 1],
+  "rowCount": 1,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:1",
+      "fields": [
+        {"key": "0xFE001C", "type": "StrArray", "value": "<StrArray>"},
+        {"key": "0x12", "type": "U32Array", "value": [4294967286, 4294967285]},
+        {"key": "0x15", "type": "MsgArray", "value": "<msgarray 1 items>"},
+        {"key": "0x1A", "type": "Bool", "value": false},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE0008", "type": "Bool", "value": true},
+        {"key": "0xFE000A", "type": "Bool", "value": false},
+        {"key": "0xD", "type": "Bool", "value": false},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0x14", "type": "Bool", "value": true},
+        {"key": "0x1D", "type": "U8", "value": 0},
+        {"key": "0x1F", "type": "U8", "value": 0},
+        {"key": "0x20", "type": "U8", "value": 0},
+        {"key": "0x21", "type": "U32", "value": 655358},
+        {"key": "0x65", "type": "U8", "value": 0},
+        {"key": "0xF", "type": "U8", "value": 1},
+        {"key": "0xFE0012", "type": "U8", "value": 1},
+        {"key": "0x12", "type": "U8", "value": 0},
+        {"key": "0xFE0001", "type": "U8", "value": 1},
+        {"key": "0x2", "type": "U8", "value": 10},
+        {"key": "0x19", "type": "U8", "value": 2},
+        {"key": "0xFE0010", "type": "Str", "value": "ether10"},
+        {"key": "0x1E", "type": "Str", "value": ""},
+        {"key": "0x13", "type": "Str", "value": ""},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    }
+  ]
+}

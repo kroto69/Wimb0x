@@ -1,0 +1,90 @@
+{
+  "path": [14, 3],
+  "rowCount": 6,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:10",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": true},
+        {"key": "0x4", "type": "U32", "value": 86400},
+        {"key": "0x5", "type": "U32", "value": 18744074},
+        {"key": "0xFE0001", "type": "U8", "value": 10},
+        {"key": "0x17", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "Str", "value": "lawe.xyz"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 1,
+      "rowId": "u8:3",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": true},
+        {"key": "0x4", "type": "U32", "value": 86400},
+        {"key": "0x5", "type": "U32", "value": 1858093},
+        {"key": "0xFE0001", "type": "U8", "value": 3},
+        {"key": "0x17", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "Str", "value": "dns.nextdns.io"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 2,
+      "rowId": "u8:4",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": true},
+        {"key": "0x4", "type": "U32", "value": 86400},
+        {"key": "0x5", "type": "U32", "value": 1989165},
+        {"key": "0xFE0001", "type": "U8", "value": 4},
+        {"key": "0x17", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "Str", "value": "dns.nextdns.io"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 3,
+      "rowId": "u8:5",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": true},
+        {"key": "0x4", "type": "U32", "value": 86400},
+        {"key": "0xFE0001", "type": "U8", "value": 5},
+        {"key": "0x17", "type": "U8", "value": 28},
+        {"key": "0x13", "type": "Addr6", "value": "<addr6>"},
+        {"key": "0x1", "type": "Str", "value": "dns.nextdns.io"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 4,
+      "rowId": "u8:6",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": true},
+        {"key": "0x4", "type": "U32", "value": 86400},
+        {"key": "0xFE0001", "type": "U8", "value": 6},
+        {"key": "0x17", "type": "U8", "value": 28},
+        {"key": "0x13", "type": "Addr6", "value": "<addr6>"},
+        {"key": "0x1", "type": "Str", "value": "dns.nextdns.io"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 5,
+      "rowId": "u8:12",
+      "fields": [
+        {"key": "0xFE0007", "type": "Bool", "value": true},
+        {"key": "0xFE000A", "type": "Bool", "value": false},
+        {"key": "0x4", "type": "U32", "value": 300},
+        {"key": "0x5", "type": "U32", "value": 18744074},
+        {"key": "0xFE0001", "type": "U8", "value": 12},
+        {"key": "0x17", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "Str", "value": "lawe.info"},
+        {"key": "0xFE0009", "type": "Str", "value": ""}
+      ]
+    }
+  ]
+}

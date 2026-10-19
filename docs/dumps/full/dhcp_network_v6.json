@@ -1,0 +1,75 @@
+{
+  "path": [23, 2],
+  "rowCount": 3,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:3",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": []},
+        {"key": "0x3", "type": "U32Array", "value": [18744074]},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0x7", "type": "U8", "value": 0},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0001", "type": "U8", "value": 3},
+        {"key": "0x1", "type": "U32", "value": 1966858},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xFE0009", "type": "Str", "value": "hotspot network"},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 1,
+      "rowId": "u8:1",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": []},
+        {"key": "0x3", "type": "U32Array", "value": [17440448]},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0x7", "type": "U8", "value": 0},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0001", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "U32", "value": 663232},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xFE0009", "type": "Str", "value": "hotspot network"},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 2,
+      "rowId": "u8:2",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": []},
+        {"key": "0x3", "type": "U32Array", "value": [35039424]},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0x7", "type": "U8", "value": 0},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0001", "type": "U8", "value": 2},
+        {"key": "0x1", "type": "U32", "value": 1484992},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    }
+  ]
+}

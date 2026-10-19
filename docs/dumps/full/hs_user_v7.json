@@ -1,0 +1,35 @@
+{
+  "path": [63, 1],
+  "rowCount": 1,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:0",
+      "fields": [
+        {"key": "0xFE000D", "type": "Bool", "value": true},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xFE000A", "type": "Bool", "value": false},
+        {"key": "0x5", "type": "U32", "value": 4294967295},
+        {"key": "0x1E", "type": "U8", "value": 0},
+        {"key": "0xC", "type": "U8", "value": 0},
+        {"key": "0x14", "type": "U8", "value": 0},
+        {"key": "0xFE0001", "type": "U8", "value": 0},
+        {"key": "0x3", "type": "U8", "value": 0},
+        {"key": "0x18", "type": "U64", "value": 0},
+        {"key": "0x16", "type": "U64", "value": 0},
+        {"key": "0x17", "type": "U64", "value": 0},
+        {"key": "0x15", "type": "U64", "value": 0},
+        {"key": "0x21", "type": "U64", "value": 0},
+        {"key": "0x20", "type": "U64", "value": 0},
+        {"key": "0x1F", "type": "U64", "value": 0},
+        {"key": "0xFE0009", "type": "Str", "value": "counters and limits for trial users"},
+        {"key": "0xD", "type": "Str", "value": ""},
+        {"key": "0xB", "type": "Raw", "value": "<raw 6 bytes: 000000000000…>"},
+        {"key": "0x6", "type": "Str", "value": ""},
+        {"key": "0xE", "type": "Str", "value": ""},
+        {"key": "0x2", "type": "Str", "value": ""},
+        {"key": "0x1", "type": "Str", "value": "default-trial"}
+      ]
+    }
+  ]
+}

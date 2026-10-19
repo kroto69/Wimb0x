@@ -1,0 +1,28 @@
+{
+  "path": [24, 29],
+  "rowCount": 2,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:13",
+      "fields": [
+        {"key": "0x14", "type": "U8", "value": 3},
+        {"key": "0xFE0001", "type": "U8", "value": 13},
+        {"key": "0x15", "type": "U8", "value": 119},
+        {"key": "0x3", "type": "U8", "value": 119},
+        {"key": "0xFE0010", "type": "Str", "value": "voltage"}
+      ]
+    },
+    {
+      "index": 1,
+      "rowId": "u8:14",
+      "fields": [
+        {"key": "0x14", "type": "U8", "value": 1},
+        {"key": "0xFE0001", "type": "U8", "value": 14},
+        {"key": "0x15", "type": "U8", "value": 48},
+        {"key": "0x1", "type": "U8", "value": 48},
+        {"key": "0xFE0010", "type": "Str", "value": "temperature"}
+      ]
+    }
+  ]
+}

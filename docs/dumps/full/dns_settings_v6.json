@@ -1,0 +1,27 @@
+{
+  "path": [14, 2],
+  "rowCount": 1,
+  "rows": [
+    {"index": 0, "rowId": "singleton", "fields": [
+      {"key": "0xFF0001", "type": "U32Array", "value": [0, 1]},
+      {"key": "0xFF0002", "type": "U32Array", "value": [14, 2]},
+      {"key": "0xA", "type": "MsgArray", "value": "<msgarray 2 items>"},
+      {"key": "0xB", "type": "MsgArray", "value": "<msgarray 0 items>"},
+      {"key": "0x3", "type": "Bool", "value": true},
+      {"key": "0x11", "type": "Bool", "value": false},
+      {"key": "0x4", "type": "U32", "value": 2048},
+      {"key": "0x5", "type": "U32", "value": 813},
+      {"key": "0x6", "type": "U32", "value": 604800},
+      {"key": "0x9", "type": "U32", "value": 4096},
+      {"key": "0xC", "type": "U32", "value": 2000},
+      {"key": "0xD", "type": "U32", "value": 10000},
+      {"key": "0xE", "type": "U8", "value": 100},
+      {"key": "0xF", "type": "U8", "value": 20},
+      {"key": "0xFF0003", "type": "U8", "value": 2},
+      {"key": "0x1", "type": "U32", "value": 16843009},
+      {"key": "0x2", "type": "U32", "value": 134744072},
+      {"key": "0xFF0006", "type": "U8", "value": 3},
+      {"key": "0x10", "type": "Str", "value": ""}
+    ]}
+  ]
+}

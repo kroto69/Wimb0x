@@ -1,0 +1,84 @@
+{
+  "path": [23, 2],
+  "rowCount": 3,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u8:2",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": []},
+        {"key": "0x3", "type": "U32Array", "value": [23334666]},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xE", "type": "Bool", "value": true},
+        {"key": "0xF", "type": "Bool", "value": false},
+        {"key": "0x10", "type": "Bool", "value": false},
+        {"key": "0x11", "type": "Bool", "value": false},
+        {"key": "0x13", "type": "Bool", "value": false},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xFE0001", "type": "U8", "value": 2},
+        {"key": "0x1", "type": "U32", "value": 6557450},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 1,
+      "rowId": "u8:1",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": [134744072]},
+        {"key": "0x3", "type": "U32Array", "value": [29888778]},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0xF", "type": "Bool", "value": false},
+        {"key": "0x10", "type": "Bool", "value": false},
+        {"key": "0x11", "type": "Bool", "value": false},
+        {"key": "0x13", "type": "Bool", "value": false},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xFE0001", "type": "U8", "value": 1},
+        {"key": "0x1", "type": "U32", "value": 13111562},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    },
+    {
+      "index": 2,
+      "rowId": "u8:3",
+      "fields": [
+        {"key": "0xA", "type": "U32Array", "value": []},
+        {"key": "0xD", "type": "U32Array", "value": []},
+        {"key": "0xB", "type": "U32Array", "value": []},
+        {"key": "0x5", "type": "U32Array", "value": []},
+        {"key": "0x4", "type": "U32Array", "value": [16843009]},
+        {"key": "0x3", "type": "U32Array", "value": [23242944]},
+        {"key": "0xFE0007", "type": "Bool", "value": false},
+        {"key": "0xE", "type": "Bool", "value": false},
+        {"key": "0xF", "type": "Bool", "value": false},
+        {"key": "0x10", "type": "Bool", "value": false},
+        {"key": "0x11", "type": "Bool", "value": false},
+        {"key": "0x13", "type": "Bool", "value": false},
+        {"key": "0x9", "type": "U8", "value": 0},
+        {"key": "0xFE0001", "type": "U8", "value": 3},
+        {"key": "0x1", "type": "U32", "value": 6465728},
+        {"key": "0x2", "type": "U32", "value": 16777215},
+        {"key": "0xC", "type": "U32", "value": 4294967295},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0x8", "type": "Str", "value": ""},
+        {"key": "0x6", "type": "Str", "value": ""}
+      ]
+    }
+  ]
+}

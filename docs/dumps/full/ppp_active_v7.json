@@ -1,0 +1,1770 @@
+{
+  "path": [27, 103],
+  "rowCount": 98,
+  "rows": [
+    {
+      "index": 0,
+      "rowId": "u32:2147483690",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 129},
+        {"key": "0x7", "type": "U32", "value": 3598193418},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483690},
+        {"key": "0xB", "type": "U32", "value": 2169503786},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B6:B1:C0:76"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ILHAM.LAP"}
+      ]
+    },
+    {
+      "index": 1,
+      "rowId": "u32:2147483692",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 131},
+        {"key": "0x7", "type": "U32", "value": 4051178250},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483692},
+        {"key": "0xB", "type": "U32", "value": 2169503788},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:13:D0:1B:A5:AE"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@AMEL.WARU"}
+      ]
+    },
+    {
+      "index": 2,
+      "rowId": "u32:2147483708",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 138},
+        {"key": "0x7", "type": "U32", "value": 3531084554},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483708},
+        {"key": "0xB", "type": "U32", "value": 2169503804},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B3:FB:4A:DA"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@YANTI.KAWISTO"}
+      ]
+    },
+    {
+      "index": 3,
+      "rowId": "u32:2147483712",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 139},
+        {"key": "0x7", "type": "U32", "value": 3933737738},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483712},
+        {"key": "0xB", "type": "U32", "value": 2169503808},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B1:76:2D:2C"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MBAH.NAN"}
+      ]
+    },
+    {
+      "index": 4,
+      "rowId": "u32:2147483717",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 141},
+        {"key": "0x7", "type": "U32", "value": 3463975690},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483717},
+        {"key": "0xB", "type": "U32", "value": 2169503813},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "YANTO LOR TRETEK"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:07:35:37:46"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ANISA"}
+      ]
+    },
+    {
+      "index": 5,
+      "rowId": "u32:2147483724",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 146},
+        {"key": "0x7", "type": "U32", "value": 3782742794},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483724},
+        {"key": "0xB", "type": "U32", "value": 2169503820},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "DC:71:37:6B:F7:08"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ROJIT"}
+      ]
+    },
+    {
+      "index": 6,
+      "rowId": "u32:2147483726",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 147},
+        {"key": "0x7", "type": "U32", "value": 4271248138},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483726},
+        {"key": "0xB", "type": "U32", "value": 2169503822},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:07:18:50:40"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MODEN"}
+      ]
+    },
+    {
+      "index": 7,
+      "rowId": "u32:2147483727",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 147},
+        {"key": "0x7", "type": "U32", "value": 3765965578},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483727},
+        {"key": "0xB", "type": "U32", "value": 2169503823},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B2:1A:A6:1D"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@MUDAH"}
+      ]
+    },
+    {
+      "index": 8,
+      "rowId": "u32:2147483728",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 148},
+        {"key": "0x7", "type": "U32", "value": 3413644042},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483728},
+        {"key": "0xB", "type": "U32", "value": 2169503824},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:06:37:1D:EB"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@BUDI.SOKO"}
+      ]
+    },
+    {
+      "index": 9,
+      "rowId": "u32:2147483733",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 170},
+        {"key": "0x7", "type": "U32", "value": 3380089610},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483733},
+        {"key": "0xB", "type": "U32", "value": 2169503829},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C8:C4:65:85:B5:4D"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@YATNO"}
+      ]
+    },
+    {
+      "index": 10,
+      "rowId": "u32:2147483737",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 211},
+        {"key": "0x7", "type": "U32", "value": 3312980746},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483737},
+        {"key": "0xB", "type": "U32", "value": 2169503833},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "60:F1:8A:FA:14:F7"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@TASOM"}
+      ]
+    },
+    {
+      "index": 11,
+      "rowId": "u32:2147483740",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 218},
+        {"key": "0x7", "type": "U32", "value": 3262649098},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483740},
+        {"key": "0xB", "type": "U32", "value": 2169503836},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:F2:9F:33:2F:D8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@TOLIYUN"}
+      ]
+    },
+    {
+      "index": 12,
+      "rowId": "u32:2147483744",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 224},
+        {"key": "0x7", "type": "U32", "value": 3195540234},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483744},
+        {"key": "0xB", "type": "U32", "value": 2169503840},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "60:7E:CD:16:E9:AB"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MAI"}
+      ]
+    },
+    {
+      "index": 13,
+      "rowId": "u32:2147483747",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 239},
+        {"key": "0x7", "type": "U32", "value": 3866628874},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483747},
+        {"key": "0xB", "type": "U32", "value": 2169503843},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:DC:02:4E:CB:57"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@RILA"}
+      ]
+    },
+    {
+      "index": 14,
+      "rowId": "u32:2147483748",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U8", "value": 241},
+        {"key": "0x7", "type": "U32", "value": 3682079498},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483748},
+        {"key": "0xB", "type": "U32", "value": 2169503844},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "94:FF:61:3F:9D:08"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@YAYUK"}
+      ]
+    },
+    {
+      "index": 15,
+      "rowId": "u32:2147483755",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 298},
+        {"key": "0x7", "type": "U32", "value": 3094876938},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483755},
+        {"key": "0xB", "type": "U32", "value": 2169503851},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:8F:8B:DF:9C:60"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@WAKID"}
+      ]
+    },
+    {
+      "index": 16,
+      "rowId": "u32:2147483758",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 302},
+        {"key": "0x7", "type": "U32", "value": 3044545290},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483758},
+        {"key": "0xB", "type": "U32", "value": 2169503854},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B3:32:25:7D"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@ILHAM"}
+      ]
+    },
+    {
+      "index": 17,
+      "rowId": "u32:2147483761",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 309},
+        {"key": "0x7", "type": "U32", "value": 2994213642},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483761},
+        {"key": "0xB", "type": "U32", "value": 2169503857},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "64:58:AD:AB:79:F0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@HADI"}
+      ]
+    },
+    {
+      "index": 18,
+      "rowId": "u32:2147483774",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 2978},
+        {"key": "0x7", "type": "U32", "value": 4204139274},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483774},
+        {"key": "0xB", "type": "U32", "value": 2169503870},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "B8:DD:71:64:BC:CB"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MUT.SABLON"}
+      ]
+    },
+    {
+      "index": 19,
+      "rowId": "u32:2147483779",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 7099},
+        {"key": "0x7", "type": "U32", "value": 4269282058},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483779},
+        {"key": "0xB", "type": "U32", "value": 2169503875},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "E4:7E:9A:4C:43:8C"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SRI.NINGSIH"}
+      ]
+    },
+    {
+      "index": 20,
+      "rowId": "u32:2147483780",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 7444},
+        {"key": "0x7", "type": "U32", "value": 4101509898},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483780},
+        {"key": "0xB", "type": "U32", "value": 2169503876},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:07:4A:D0:9F"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MUFID"}
+      ]
+    },
+    {
+      "index": 21,
+      "rowId": "u32:2147483783",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 12529},
+        {"key": "0x7", "type": "U32", "value": 4187362058},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483783},
+        {"key": "0xB", "type": "U32", "value": 2169503879},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:BA:57:FA:45"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU078@UDIN.KAUM"}
+      ]
+    },
+    {
+      "index": 22,
+      "rowId": "u32:2147483784",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 19189},
+        {"key": "0x7", "type": "U32", "value": 3161985802},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483784},
+        {"key": "0xB", "type": "U32", "value": 2169503880},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "74:B5:7E:4A:5F:C0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@JUMARSONO"}
+      ]
+    },
+    {
+      "index": 23,
+      "rowId": "u32:2147483787",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 26077},
+        {"key": "0x7", "type": "U32", "value": 3732411146},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483787},
+        {"key": "0xB", "type": "U32", "value": 2169503883},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:B8:26:1C"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ERIK"}
+      ]
+    },
+    {
+      "index": 24,
+      "rowId": "u32:2147483791",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 45488},
+        {"key": "0x7", "type": "U32", "value": 3900183306},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483791},
+        {"key": "0xB", "type": "U32", "value": 2169503887},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:6A:3E:30"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@AIS"}
+      ]
+    },
+    {
+      "index": 25,
+      "rowId": "u32:2147483842",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 268360},
+        {"key": "0x7", "type": "U32", "value": 3799520010},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483842},
+        {"key": "0xB", "type": "U32", "value": 2169503938},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:DC:02:04:CF:4F"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ROMADONI"}
+      ]
+    },
+    {
+      "index": 26,
+      "rowId": "u32:2147483900",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 445158},
+        {"key": "0x7", "type": "U32", "value": 4000846602},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483900},
+        {"key": "0xB", "type": "U32", "value": 2169503996},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "9C:6F:52:17:3D:24"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@NGATINI"}
+      ]
+    },
+    {
+      "index": 27,
+      "rowId": "u32:2147483906",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 460855},
+        {"key": "0x7", "type": "U32", "value": 3581416202},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483906},
+        {"key": "0xB", "type": "U32", "value": 2169504002},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "80:B5:75:63:31:83"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SUGIANTO"}
+      ]
+    },
+    {
+      "index": 28,
+      "rowId": "u32:2147483915",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 513916},
+        {"key": "0x7", "type": "U32", "value": 4220916490},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483915},
+        {"key": "0xB", "type": "U32", "value": 2169504011},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:22:95:A2:FD:20"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU042@SISWANTO"}
+      ]
+    },
+    {
+      "index": 29,
+      "rowId": "u32:2147483921",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 535611},
+        {"key": "0x7", "type": "U32", "value": 3564638986},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483921},
+        {"key": "0xB", "type": "U32", "value": 2169504017},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "3C:78:43:EE:5B:53"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@RISMA.SONO"}
+      ]
+    },
+    {
+      "index": 30,
+      "rowId": "u32:2147483932",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 587826},
+        {"key": "0x7", "type": "U32", "value": 3665302282},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483932},
+        {"key": "0xB", "type": "U32", "value": 2169504028},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:B7:6F:D9"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@DIAN.1"}
+      ]
+    },
+    {
+      "index": 31,
+      "rowId": "u32:2147483934",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 591509},
+        {"key": "0x7", "type": "U32", "value": 2859995914},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483934},
+        {"key": "0xB", "type": "U32", "value": 2169504030},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "B0:53:65:07:A1:6F"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@PAUD.MIFTA"}
+      ]
+    },
+    {
+      "index": 32,
+      "rowId": "u32:2147483937",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 602110},
+        {"key": "0x7", "type": "U32", "value": 2759332618},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483937},
+        {"key": "0xB", "type": "U32", "value": 2169504033},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C8:5A:9F:65:0F:0C"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@GUN.SONO"}
+      ]
+    },
+    {
+      "index": 33,
+      "rowId": "u32:2147483938",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 602979},
+        {"key": "0x7", "type": "U32", "value": 2742555402},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483938},
+        {"key": "0xB", "type": "U32", "value": 2169504034},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "F0:63:F9:9C:E3:B3"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SOL.KAYU"}
+      ]
+    },
+    {
+      "index": 34,
+      "rowId": "u32:2147483941",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 605236},
+        {"key": "0x7", "type": "U32", "value": 2725778186},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483941},
+        {"key": "0xB", "type": "U32", "value": 2169504037},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "84:87:FF:60:A7:48"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@ISTANA.PARFUM"}
+      ]
+    },
+    {
+      "index": 35,
+      "rowId": "u32:2147483953",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 634961},
+        {"key": "0x7", "type": "U32", "value": 4218950410},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483953},
+        {"key": "0xB", "type": "U32", "value": 2169504049},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:F2:9F:74:02:B8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ALFAN"}
+      ]
+    },
+    {
+      "index": 36,
+      "rowId": "u32:2147483958",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 651882},
+        {"key": "0x7", "type": "U32", "value": 3614970634},
+        {"key": "0xFE0001", "type": "U32", "value": 2147483958},
+        {"key": "0xB", "type": "U32", "value": 2169504054},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "14:A0:F8:D9:CA:4F"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SUMARNI"}
+      ]
+    },
+    {
+      "index": 37,
+      "rowId": "u32:2147484012",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 875890},
+        {"key": "0x7", "type": "U32", "value": 3984069386},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484012},
+        {"key": "0xB", "type": "U32", "value": 2169504108},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "B0:8B:92:91:45:4F"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SITI.ASAROH"}
+      ]
+    },
+    {
+      "index": 38,
+      "rowId": "u32:2147484015",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 886127},
+        {"key": "0x7", "type": "U32", "value": 3849851658},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484015},
+        {"key": "0xB", "type": "U32", "value": 2169504111},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:F2:9F:44:1A:A8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ENDAH.SONO"}
+      ]
+    },
+    {
+      "index": 39,
+      "rowId": "u32:2147484026",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 935271},
+        {"key": "0x7", "type": "U32", "value": 3497530122},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484026},
+        {"key": "0xB", "type": "U32", "value": 2169504122},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "90:86:9B:E7:A2:D6"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@NABILA"}
+      ]
+    },
+    {
+      "index": 40,
+      "rowId": "u32:2147484036",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 987407},
+        {"key": "0x7", "type": "U32", "value": 3648525066},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484036},
+        {"key": "0xB", "type": "U32", "value": 2169504132},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:7D:1A:95"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SIKIN"}
+      ]
+    },
+    {
+      "index": 41,
+      "rowId": "u32:2147484040",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1024794},
+        {"key": "0x7", "type": "U32", "value": 3010990858},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484040},
+        {"key": "0xB", "type": "U32", "value": 2169504136},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "F4:B5:AA:79:FD:08"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SUROSO"}
+      ]
+    },
+    {
+      "index": 42,
+      "rowId": "u32:2147484050",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1045647},
+        {"key": "0x7", "type": "U32", "value": 4151841546},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484050},
+        {"key": "0xB", "type": "U32", "value": 2169504146},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "68:8B:0F:19:B4:B8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@DAYAH"}
+      ]
+    },
+    {
+      "index": 43,
+      "rowId": "u32:2147484055",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1053148},
+        {"key": "0x7", "type": "U32", "value": 4170584842},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484055},
+        {"key": "0xB", "type": "U32", "value": 2169504151},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "64:E0:AB:6F:6A:34"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@WIDI.SONO"}
+      ]
+    },
+    {
+      "index": 44,
+      "rowId": "u32:2147484057",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1054626},
+        {"key": "0x7", "type": "U32", "value": 2943881994},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484057},
+        {"key": "0xB", "type": "U32", "value": 2169504153},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:A8:D7:A0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@LURR"}
+      ]
+    },
+    {
+      "index": 45,
+      "rowId": "u32:2147484059",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1058239},
+        {"key": "0x7", "type": "U32", "value": 4168618762},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484059},
+        {"key": "0xB", "type": "U32", "value": 2169504155},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:06:05:FC:B2"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@RONDI"}
+      ]
+    },
+    {
+      "index": 46,
+      "rowId": "u32:2147484062",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1068004},
+        {"key": "0x7", "type": "U32", "value": 3749188362},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484062},
+        {"key": "0xB", "type": "U32", "value": 2169504158},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "RIKO SONO"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "18:7C:AA:7F:56:AA"},
+        {"key": "0x1", "type": "Str", "value": "Yes"}
+      ]
+    },
+    {
+      "index": 47,
+      "rowId": "u32:2147484074",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1121367},
+        {"key": "0x7", "type": "U32", "value": 3212317450},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484074},
+        {"key": "0xB", "type": "U32", "value": 2169504170},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:E6:B0:0F:F2:C0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MARYAM"}
+      ]
+    },
+    {
+      "index": 48,
+      "rowId": "u32:2147484076",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1124503},
+        {"key": "0x7", "type": "U32", "value": 3833074442},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484076},
+        {"key": "0xB", "type": "U32", "value": 2169504172},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:24:2D:38"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@WARNO.KUMIS"}
+      ]
+    },
+    {
+      "index": 49,
+      "rowId": "u32:2147484080",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1153929},
+        {"key": "0x7", "type": "U32", "value": 3715633930},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484080},
+        {"key": "0xB", "type": "U32", "value": 2169504176},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "KULONE IKA"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:E6:B0:03:20:70"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@CANDRA"}
+      ]
+    },
+    {
+      "index": 50,
+      "rowId": "u32:2147484086",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1206722},
+        {"key": "0x7", "type": "U32", "value": 4286059274},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484086},
+        {"key": "0xB", "type": "U32", "value": 2169504182},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:F2:9F:E4:B7:70"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU070@GUNDIK.LOR"}
+      ]
+    },
+    {
+      "index": 51,
+      "rowId": "u32:2147484087",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1214911},
+        {"key": "0x7", "type": "U32", "value": 6558474},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484087},
+        {"key": "0xB", "type": "U32", "value": 2169504183},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:06:79:74:29"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MBAK.MI"}
+      ]
+    },
+    {
+      "index": 52,
+      "rowId": "u32:2147484088",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1225724},
+        {"key": "0x7", "type": "U32", "value": 3547861770},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484088},
+        {"key": "0xB", "type": "U32", "value": 2169504184},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "90:86:9B:E8:76:3B"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@WULAN"}
+      ]
+    },
+    {
+      "index": 53,
+      "rowId": "u32:2147484107",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1277045},
+        {"key": "0x7", "type": "U32", "value": 3916960522},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484107},
+        {"key": "0xB", "type": "U32", "value": 2169504203},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:8F:8B:57:00:47"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ISTI.ENDANG"}
+      ]
+    },
+    {
+      "index": 54,
+      "rowId": "u32:2147484120",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292106},
+        {"key": "0x7", "type": "U32", "value": 3078099722},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484120},
+        {"key": "0xB", "type": "U32", "value": 2169504216},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "3C:F6:52:9A:15:A3"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@TUMIJAN"}
+      ]
+    },
+    {
+      "index": 55,
+      "rowId": "u32:2147484121",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292107},
+        {"key": "0x7", "type": "U32", "value": 2709000970},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484121},
+        {"key": "0xB", "type": "U32", "value": 2169504217},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C4:44:7D:D5:55:43"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU015@WIDI"}
+      ]
+    },
+    {
+      "index": 56,
+      "rowId": "u32:2147484122",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292107},
+        {"key": "0x7", "type": "U32", "value": 2692223754},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484122},
+        {"key": "0xB", "type": "U32", "value": 2169504218},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "F4:B7:8D:D8:D5:06"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@YAROH"}
+      ]
+    },
+    {
+      "index": 57,
+      "rowId": "u32:2147484123",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292108},
+        {"key": "0x7", "type": "U32", "value": 2658669322},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484123},
+        {"key": "0xB", "type": "U32", "value": 2169504219},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:E5:EF:F4:CE:AB"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@DARI"}
+      ]
+    },
+    {
+      "index": 58,
+      "rowId": "u32:2147484124",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292109},
+        {"key": "0x7", "type": "U32", "value": 4254470922},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484124},
+        {"key": "0xB", "type": "U32", "value": 2169504220},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "++Budi Bengkel 280rb"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "28:41:EC:70:1B:96"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@BUDI"}
+      ]
+    },
+    {
+      "index": 59,
+      "rowId": "u32:2147484125",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292109},
+        {"key": "0x7", "type": "U32", "value": 2675446538},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484125},
+        {"key": "0xB", "type": "U32", "value": 2169504221},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "04:33:89:23:B0:60"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@JUMINI"}
+      ]
+    },
+    {
+      "index": 60,
+      "rowId": "u32:2147484129",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292963},
+        {"key": "0x7", "type": "U32", "value": 3430421258},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484129},
+        {"key": "0xB", "type": "U32", "value": 2169504225},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C4:27:28:29:C1:C0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@USIL"}
+      ]
+    },
+    {
+      "index": 61,
+      "rowId": "u32:2147484130",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292963},
+        {"key": "0x7", "type": "U32", "value": 3396866826},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484130},
+        {"key": "0xB", "type": "U32", "value": 2169504226},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "68:9F:F0:BA:8A:CE"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ABDULLAH"}
+      ]
+    },
+    {
+      "index": 62,
+      "rowId": "u32:2147484131",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292963},
+        {"key": "0x7", "type": "U32", "value": 3967292170},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484131},
+        {"key": "0xB", "type": "U32", "value": 2169504227},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "EC:F0:FE:6B:C4:73"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ANTOK"}
+      ]
+    },
+    {
+      "index": 63,
+      "rowId": "u32:2147484133",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292965},
+        {"key": "0x7", "type": "U32", "value": 2893550346},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484133},
+        {"key": "0xB", "type": "U32", "value": 2169504229},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:BC:CF:E8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@CICI"}
+      ]
+    },
+    {
+      "index": 64,
+      "rowId": "u32:2147484134",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292965},
+        {"key": "0x7", "type": "U32", "value": 3279426314},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484134},
+        {"key": "0xB", "type": "U32", "value": 2169504230},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:BF:4D:66"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@INUL"}
+      ]
+    },
+    {
+      "index": 65,
+      "rowId": "u32:2147484135",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292966},
+        {"key": "0x7", "type": "U32", "value": 4202173194},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484135},
+        {"key": "0xB", "type": "U32", "value": 2169504231},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:6C:11:98"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ASIH"}
+      ]
+    },
+    {
+      "index": 66,
+      "rowId": "u32:2147484136",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292966},
+        {"key": "0x7", "type": "U32", "value": 3229094666},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484136},
+        {"key": "0xB", "type": "U32", "value": 2169504232},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:05:49:6C:62"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@NOCUR"}
+      ]
+    },
+    {
+      "index": 67,
+      "rowId": "u32:2147484139",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1292967},
+        {"key": "0x7", "type": "U32", "value": 3329757962},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484139},
+        {"key": "0xB", "type": "U32", "value": 2169504235},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:8D:C2:D6"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@DARJI"}
+      ]
+    },
+    {
+      "index": 68,
+      "rowId": "u32:2147484143",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1302195},
+        {"key": "0x7", "type": "U32", "value": 3698856714},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484143},
+        {"key": "0xB", "type": "U32", "value": 2169504239},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "8C:53:D2:47:EF:61"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ALI.KRUPUK"}
+      ]
+    },
+    {
+      "index": 69,
+      "rowId": "u32:2147484144",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1307897},
+        {"key": "0x7", "type": "U32", "value": 4235727626},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484144},
+        {"key": "0xB", "type": "U32", "value": 2169504240},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:04:47:C1:2E"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@IKA.YULI"}
+      ]
+    },
+    {
+      "index": 70,
+      "rowId": "u32:2147484148",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1316614},
+        {"key": "0x7", "type": "U32", "value": 3447198474},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484148},
+        {"key": "0xB", "type": "U32", "value": 2169504244},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "74:6F:88:1B:8A:4C"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MUKHLIS"}
+      ]
+    },
+    {
+      "index": 71,
+      "rowId": "u32:2147484173",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1389147},
+        {"key": "0x7", "type": "U32", "value": 4135064330},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484173},
+        {"key": "0xB", "type": "U32", "value": 2169504269},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "AKBAR/RAFAEL"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "CC:5C:DE:D6:AE:C0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@TEDJO"}
+      ]
+    },
+    {
+      "index": 72,
+      "rowId": "u32:2147484175",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1400082},
+        {"key": "0x7", "type": "U32", "value": 2927104778},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484175},
+        {"key": "0xB", "type": "U32", "value": 2169504271},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "3C:E3:E7:1B:2E:E8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@PUJIANTO"}
+      ]
+    },
+    {
+      "index": 73,
+      "rowId": "u32:2147484176",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1400791},
+        {"key": "0x7", "type": "U32", "value": 3816297226},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484176},
+        {"key": "0xB", "type": "U32", "value": 2169504272},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:22:95:4B:70:C8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU080@HARDI.SONO"}
+      ]
+    },
+    {
+      "index": 74,
+      "rowId": "u32:2147484180",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1404520},
+        {"key": "0x7", "type": "U32", "value": 2960659210},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484180},
+        {"key": "0xB", "type": "U32", "value": 2169504276},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:E6:B0:03:72:28"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SAMAD"}
+      ]
+    },
+    {
+      "index": 75,
+      "rowId": "u32:2147484183",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1406786},
+        {"key": "0x7", "type": "U32", "value": 4034401034},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484183},
+        {"key": "0xB", "type": "U32", "value": 2169504279},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:8E:5B:A5:E2:F8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MUMUN"}
+      ]
+    },
+    {
+      "index": 76,
+      "rowId": "u32:2147484185",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1421021},
+        {"key": "0x7", "type": "U32", "value": 4288025354},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484185},
+        {"key": "0xB", "type": "U32", "value": 2169504281},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "DC:71:37:7B:71:F0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@BUDI.JAMIAH"}
+      ]
+    },
+    {
+      "index": 77,
+      "rowId": "u32:2147484191",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1449464},
+        {"key": "0x7", "type": "U32", "value": 2826441482},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484191},
+        {"key": "0xB", "type": "U32", "value": 2169504287},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "84:87:FF:88:01:24"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SURYADI"}
+      ]
+    },
+    {
+      "index": 78,
+      "rowId": "u32:2147484194",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1449911},
+        {"key": "0x7", "type": "U32", "value": 3027768074},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484194},
+        {"key": "0xB", "type": "U32", "value": 2169504290},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:78:91:70"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MARYANTO"}
+      ]
+    },
+    {
+      "index": 79,
+      "rowId": "u32:2147484196",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1455842},
+        {"key": "0x7", "type": "U32", "value": 3631747850},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484196},
+        {"key": "0xB", "type": "U32", "value": 2169504292},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:9E:07:8B:93:B2"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SUPADI"}
+      ]
+    },
+    {
+      "index": 80,
+      "rowId": "u32:2147484197",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1460520},
+        {"key": "0x7", "type": "U32", "value": 2809664266},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484197},
+        {"key": "0xB", "type": "U32", "value": 2169504293},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "A8:2B:CD:38:0A:8D"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@SOL.ANGGA"}
+      ]
+    },
+    {
+      "index": 81,
+      "rowId": "u32:2147484198",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1460711},
+        {"key": "0x7", "type": "U32", "value": 4252504842},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484198},
+        {"key": "0xB", "type": "U32", "value": 2169504294},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "18:7C:AA:6D:F8:29"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@AHMAD.SOFII"}
+      ]
+    },
+    {
+      "index": 82,
+      "rowId": "u32:2147484199",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1464631},
+        {"key": "0x7", "type": "U32", "value": 3480752906},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484199},
+        {"key": "0xB", "type": "U32", "value": 2169504295},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "44:FB:5A:6D:8F:E4"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@TEGUH.LAP"}
+      ]
+    },
+    {
+      "index": 83,
+      "rowId": "u32:2147484203",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1480982},
+        {"key": "0x7", "type": "U32", "value": 2977436426},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484203},
+        {"key": "0xB", "type": "U32", "value": 2169504299},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "6C:D2:B3:D3:A8:B9"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU@PAK.JEK"}
+      ]
+    },
+    {
+      "index": 84,
+      "rowId": "u32:2147484204",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1487849},
+        {"key": "0x7", "type": "U32", "value": 4017623818},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484204},
+        {"key": "0xB", "type": "U32", "value": 2169504300},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:78:4E:32:22:C8"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@KAKLI.MBOK"}
+      ]
+    },
+    {
+      "index": 85,
+      "rowId": "u32:2147484205",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1489667},
+        {"key": "0x7", "type": "U32", "value": 4237693706},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484205},
+        {"key": "0xB", "type": "U32", "value": 2169504301},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "30:D3:86:5D:CE:B1"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@LAP.WARUNG.SONO"}
+      ]
+    },
+    {
+      "index": 86,
+      "rowId": "u32:2147484207",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1505424},
+        {"key": "0x7", "type": "U32", "value": 4067955466},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484207},
+        {"key": "0xB", "type": "U32", "value": 2169504303},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "nur kulone hardy"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:8E:5B:AD:21:90"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@NAFISSA"}
+      ]
+    },
+    {
+      "index": 87,
+      "rowId": "u32:2147484208",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1506417},
+        {"key": "0x7", "type": "U32", "value": 3061322506},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484208},
+        {"key": "0xB", "type": "U32", "value": 2169504304},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "D4:7E:E4:DF:B9:70"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@YANTI"}
+      ]
+    },
+    {
+      "index": 88,
+      "rowId": "u32:2147484209",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1510985},
+        {"key": "0x7", "type": "U32", "value": 4118287114},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484209},
+        {"key": "0xB", "type": "U32", "value": 2169504305},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "EC:6C:B5:B0:31:98"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@LASTRI"}
+      ]
+    },
+    {
+      "index": 89,
+      "rowId": "u32:2147484211",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1534860},
+        {"key": "0x7", "type": "U32", "value": 3245871882},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484211},
+        {"key": "0xB", "type": "U32", "value": 2169504307},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "14:09:DC:FE:66:74"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ASROKAH"}
+      ]
+    },
+    {
+      "index": 90,
+      "rowId": "u32:2147484212",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1548669},
+        {"key": "0x7", "type": "U32", "value": 4084732682},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484212},
+        {"key": "0xB", "type": "U32", "value": 2169504308},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C0:FD:84:16:D7:A0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@RAFI"}
+      ]
+    },
+    {
+      "index": 91,
+      "rowId": "u32:2147484213",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1558466},
+        {"key": "0x7", "type": "U32", "value": 2641892106},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484213},
+        {"key": "0xB", "type": "U32", "value": 2169504309},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "SRI HANDAYANI SONO"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "28:C0:1B:74:10:17"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ANIK.SONO"}
+      ]
+    },
+    {
+      "index": 92,
+      "rowId": "u32:2147484214",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1566252},
+        {"key": "0x7", "type": "U32", "value": 3346535178},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484214},
+        {"key": "0xB", "type": "U32", "value": 2169504310},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "78:2E:56:E8:C4:1B"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@ARIP"}
+      ]
+    },
+    {
+      "index": 93,
+      "rowId": "u32:2147484215",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1574064},
+        {"key": "0x7", "type": "U32", "value": 3145208586},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484215},
+        {"key": "0xB", "type": "U32", "value": 2169504311},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "78:C3:13:97:2F:8E"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@MBAH.TAMIN"}
+      ]
+    },
+    {
+      "index": 94,
+      "rowId": "u32:2147484216",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1575972},
+        {"key": "0x7", "type": "U32", "value": 2910327562},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484216},
+        {"key": "0xB", "type": "U32", "value": 2169504312},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": "hartik"},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "1C:41:76:13:14:40"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@DINDA"}
+      ]
+    },
+    {
+      "index": 95,
+      "rowId": "u32:2147484217",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1579685},
+        {"key": "0x7", "type": "U32", "value": 2876773130},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484217},
+        {"key": "0xB", "type": "U32", "value": 2169504313},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "FC:F2:9F:41:32:58"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@DWI"}
+      ]
+    },
+    {
+      "index": 96,
+      "rowId": "u32:2147484218",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1584173},
+        {"key": "0x7", "type": "U32", "value": 2792887050},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484218},
+        {"key": "0xB", "type": "U32", "value": 2169504314},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "C0:D0:FF:C5:7F:70"},
+        {"key": "0x1", "type": "Str", "value": "RMWARU062@SOPII"}
+      ]
+    },
+    {
+      "index": 97,
+      "rowId": "u32:2147484219",
+      "fields": [
+        {"key": "0x8", "type": "Bool", "value": false},
+        {"key": "0x6", "type": "U32", "value": 1585002},
+        {"key": "0x7", "type": "U32", "value": 3883406090},
+        {"key": "0xFE0001", "type": "U32", "value": 2147484219},
+        {"key": "0xB", "type": "U32", "value": 2169504315},
+        {"key": "0x2", "type": "U8", "value": 3},
+        {"key": "0xFE0009", "type": "Str", "value": ""},
+        {"key": "0xA", "type": "U64", "value": 0},
+        {"key": "0x9", "type": "U64", "value": 0},
+        {"key": "0x5", "type": "Str", "value": ""},
+        {"key": "0x3", "type": "Str", "value": "BC:9C:31:D3:D5:D0"},
+        {"key": "0x1", "type": "Str", "value": "RMWARUE@RIAN.RISKI"}
+      ]
+    }
+  ]
+}
