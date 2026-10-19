@@ -208,3 +208,41 @@ fun WinboxSession.getHotspotActive(): List<HotspotActiveUser> =
  */
 fun WinboxSession.getLogs(): List<LogEntry> =
     getAllRows(listOf(3, 4)).map { parseLogRow(it) }
+
+/**
+ * Info SFP DDM native via [20,0] dengan withStats=true.
+ * Live-verified 2026-10-20 (v7 RB4011, sfp-sfpplus1): field 0x459-0x463, 0x455, 0x40D.
+ * Tanpa terminal — full native WinBox.
+ */
+fun WinboxSession.getSfpInfo(interfaceName: String): SfpInfo? {
+    val row = getAllRows(listOf(20, 0), withStats = true)
+        .firstOrNull { it.str(InterfaceFields.NAME) == interfaceName }
+        ?: return null
+    return parseSfpRow(interfaceName, row)
+}
+
+/** Parse satu baris [20,0] (withStats) menjadi SfpInfo — pure. */
+fun parseSfpRow(iface: String, r: M2Message): SfpInfo? {
+    val vendor = r.str(InterfaceFields.SFP_VENDOR_NAME) ?: return null
+    // RX power adalah u32 signed (0xFFFFDDF2 = -8714)
+    val rxRaw = r.uint(InterfaceFields.SFP_RX_POWER)
+    val rxDbm = rxRaw?.let { if (it > 0x7FFFFFFFL) (it - 0x100000000L) / 1000.0 else it / 1000.0 }
+    return SfpInfo(
+        interfaceName = iface,
+        type = null, // tidak di tabel; dari terminal bila perlu
+        connectorType = null,
+        vendorName = vendor,
+        vendorPartNumber = r.str(InterfaceFields.SFP_VENDOR_PN),
+        vendorSerial = r.str(InterfaceFields.SFP_VENDOR_SERIAL),
+        wavelength = r.uint(InterfaceFields.SFP_WAVELENGTH)?.let { "${it / 100.0}nm" },
+        linkLengthSm = r.uint(InterfaceFields.SFP_LINK_LEN_M)?.let { "${it / 1000.0}km" },
+        temperatureC = r.uint(InterfaceFields.SFP_TEMPERATURE)?.toDouble(),
+        supplyVoltageV = r.uint(InterfaceFields.SFP_VOLTAGE)?.let { it / 1000.0 },
+        txBiasCurrentMa = r.uint(InterfaceFields.SFP_TX_BIAS)?.toDouble(),
+        txPowerDbm = r.uint(InterfaceFields.SFP_TX_POWER)?.let { it / 1000.0 },
+        rxPowerDbm = rxDbm,
+        rxLoss = r.bool(InterfaceFields.SFP_RX_LOSS),
+        txFault = r.bool(InterfaceFields.SFP_TX_FAULT),
+        modulePresent = true, // ada vendor = modul kepasang
+    )
+}

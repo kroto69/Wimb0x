@@ -331,3 +331,83 @@ data class SystemInfo(
     /** identity [24,1] key 0xc. */
     val identity: String?,
 )
+
+// ================= SFP =================
+
+/**
+ * Info SFP DDM native dari `[20,0]` dengan withStats=true.
+ * Live-verified 2026-10-20 (v7 RB4011): field 0x459-0x463, 0x455, 0x40D.
+ */
+data class SfpInfo(
+    val interfaceName: String,
+    /** mis. "SFP/SFP+/SFP28/SFP56". */
+    val type: String?,
+    /** mis. "LC". */
+    val connectorType: String?,
+    /** mis. "BNCPTI". */
+    val vendorName: String?,
+    /** mis. "10G-B20-SM1330". */
+    val vendorPartNumber: String?,
+    /** mis. "202510300003". */
+    val vendorSerial: String?,
+    /** mis. "1330nm". */
+    val wavelength: String?,
+    /** mis. "20km". */
+    val linkLengthSm: String?,
+    /** Celsius, mis. 52. */
+    val temperatureC: Double?,
+    /** Volt, mis. 3.318. */
+    val supplyVoltageV: Double?,
+    /** mA, mis. 36. */
+    val txBiasCurrentMa: Double?,
+    /** dBm, mis. 0.1. */
+    val txPowerDbm: Double?,
+    /** dBm, mis. -8.7. */
+    val rxPowerDbm: Double?,
+    val rxLoss: Boolean?,
+    val txFault: Boolean?,
+    val modulePresent: Boolean?,
+)
+
+/**
+ * Parse output `/interface ethernet monitor <iface>` — pure.
+ * Format: "sfp-temperature: 53C", "sfp-tx-power: 0.2dBm", dst.
+ */
+fun parseSfpMonitor(iface: String, output: String): SfpInfo? {
+    val map = mutableMapOf<String, String>()
+    for (line in output.lines()) {
+        val idx = line.indexOf(':')
+        if (idx < 0) continue
+        val k = line.substring(0, idx).trim()
+        val v = line.substring(idx + 1).trim()
+        if (k.startsWith("sfp-") && v.isNotEmpty()) map[k] = v
+    }
+    if (map.isEmpty()) return null
+    fun num(key: String): Double? {
+        val v = map[key] ?: return null
+        return Regex("""-?[\d.]+""").find(v)?.value?.toDoubleOrNull()
+    }
+    fun bool(key: String): Boolean? = when (map[key]?.lowercase()) {
+        "yes" -> true
+        "no" -> false
+        else -> null
+    }
+    return SfpInfo(
+        interfaceName = iface,
+        type = map["sfp-type"],
+        connectorType = map["sfp-connector-type"],
+        vendorName = map["sfp-vendor-name"],
+        vendorPartNumber = map["sfp-vendor-part-number"],
+        vendorSerial = map["sfp-vendor-serial"],
+        wavelength = map["sfp-wavelength"],
+        linkLengthSm = map["sfp-link-length-sm"],
+        temperatureC = num("sfp-temperature"),
+        supplyVoltageV = num("sfp-supply-voltage"),
+        txBiasCurrentMa = num("sfp-tx-bias-current"),
+        txPowerDbm = num("sfp-tx-power"),
+        rxPowerDbm = num("sfp-rx-power"),
+        rxLoss = bool("sfp-rx-loss"),
+        txFault = bool("sfp-tx-fault"),
+        modulePresent = bool("sfp-module-present"),
+    )
+}

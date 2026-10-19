@@ -528,6 +528,40 @@ fun main() {
         assertEq("name: R.WARU", clean)
     }
 
+    test("parseSfpMonitor: data DDM lengkap") {
+        val out = "name: sfp-sfpplus1\n" +
+            "sfp-module-present: yes\n" +
+            "sfp-rx-loss: no\n" +
+            "sfp-tx-fault: no\n" +
+            "sfp-type: SFP/SFP+/SFP28/SFP56\n" +
+            "sfp-connector-type: LC\n" +
+            "sfp-vendor-name: BNCPTI\n" +
+            "sfp-vendor-part-number: 10G-B20-SM1330\n" +
+            "sfp-vendor-serial: 202510300003\n" +
+            "sfp-wavelength: 1330nm\n" +
+            "sfp-link-length-sm: 20km\n" +
+            "sfp-temperature: 53C\n" +
+            "sfp-supply-voltage: 3.318V\n" +
+            "sfp-tx-bias-current: 36mA\n" +
+            "sfp-tx-power: 0.2dBm\n" +
+            "sfp-rx-power: -8.732dBm\n"
+        val info = parseSfpMonitor("sfp-sfpplus1", out)!!
+        assertEq("sfp-sfpplus1", info.interfaceName)
+        assertEq("BNCPTI", info.vendorName)
+        assertEq("10G-B20-SM1330", info.vendorPartNumber)
+        assertEq("1330nm", info.wavelength)
+        assertEq(53.0, info.temperatureC)
+        assertEq(3.318, info.supplyVoltageV)
+        assertEq(0.2, info.txPowerDbm)
+        assertEq(-8.732, info.rxPowerDbm)
+        assertEq(false, info.rxLoss)
+        assertEq(true, info.modulePresent)
+    }
+
+    test("parseSfpMonitor: kosong → null") {
+        assertEq(null, parseSfpMonitor("sfp1", "name: sfp1\nstatus: no-link\n"))
+    }
+
     println("\n=== $passed PASS, $failed FAIL ===")
     if (failed > 0) kotlin.system.exitProcess(1)
 }

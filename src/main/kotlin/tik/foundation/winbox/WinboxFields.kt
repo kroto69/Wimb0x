@@ -134,6 +134,23 @@ object InterfaceFields {
     const val L2MTU = 0x10065 // u32 — 1596/1592 teramati
     const val SPEED = 0x3F2 // u8 enum: 2≈1G, 3≈10G/SFP+ (bukan bps)
     const val RUNNING = 0x1000E // bool — true = link up
+    // SFP DDM (live-verified 2026-10-20 via withStats=true di [20,0], v7 RB4011)
+    // Nilai live (temperature, voltage, power) hanya muncul dengan withStats=true.
+    const val SFP_VENDOR_NAME = 0x459 // str — "BNCPTI"
+    const val SFP_VENDOR_PN = 0x45A // str — "10G-B20-SM1330"
+    const val SFP_VENDOR_REV = 0x45B // str — "A"
+    const val SFP_VENDOR_SERIAL = 0x45C // str — "202510300003"
+    const val SFP_MFG_DATE = 0x45D // str — "25-10-30"
+    const val SFP_WAVELENGTH = 0x45E // u32 — 133000 = 1330.0nm (/100)
+    const val SFP_TEMPERATURE = 0x45F // u32 — 52 = 52°C (langsung)
+    const val SFP_VOLTAGE = 0x460 // u32 — 3318 = 3.318V (/1000)
+    const val SFP_TX_BIAS = 0x461 // u32 — 36 = 36mA (langsung)
+    const val SFP_TX_POWER = 0x462 // u32 — 200 = 0.2dBm (/1000)
+    const val SFP_RX_POWER = 0x463 // u32 signed — -8714 = -8.714dBm (/1000)
+    const val SFP_LINK_LEN_M = 0x455 // u32 — 20000 = 20km (meter)
+    const val SFP_SHUTDOWN_TEMP = 0x40D // u8 — 95 = 95°C
+    const val SFP_RX_LOSS = 0x452 // bool — false = no loss
+    const val SFP_TX_FAULT = 0x453 // bool — false = no fault
     // VLAN (live-verified 2026-10-17)
     const val VLAN_ID = 0x7D1 // u8/u32 — vlan id
     const val VLAN_PARENT = 0x7D2 // u8 → itemId parent interface
